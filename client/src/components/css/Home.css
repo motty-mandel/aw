@@ -30,12 +30,12 @@
     align-items: center;
     width: 300px;
     height: 100px;
-    background-color: #f8f9fa;
+    background-color: #e5fdef;
     margin: 0 0 50px 0;
     padding: 10px;
     border-radius: 10px;
 }
 
 .painting:hover {
-    box-shadow: -6px -6px 10px 3px #d1e6fb, 6px -6px 10px 3px #d1e6fb;
+    box-shadow: -6px -6px 10px 3px #ffd7af, 6px -6px 10px 3px #ffd7af;
 }

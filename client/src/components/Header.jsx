@@ -17,7 +17,7 @@ export default function Header() {
                     </div>
                 </div>
 
-                <nav class="navbar navbar-light bg-light d-flex flex-column align-items-center center-nav">
+                <nav class="navbar d-flex flex-column align-items-center center-nav">
                     <span class="navbar mb-0 pb-0 header-span">Avigails Paintings</span>
                     <img src={BorderPic} alt="flower-border" height={"70px"} />
                 </nav>
