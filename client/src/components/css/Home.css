@@ -1,0 +1,41 @@
+.main-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.painting {
+    width: 200px;
+    height: 300px;
+    border-radius: 20px 20px 0 0;
+    cursor: pointer;
+    transition: ease-in-out 200ms;
+}
+
+.canvas {
+    width: 200px;
+    height: 300px;
+    margin: 50px 50px 0 50px;
+}
+
+.info p {
+    margin: 0;
+    font-weight: bold;
+    line-height: 2rem;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    width: 300px;
+    height: 100px;
+    background-color: #f8f9fa;
+    margin: 0 0 50px 0;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.painting:hover {
+    box-shadow: -6px -6px 10px 3px #d1e6fb, 6px -6px 10px 3px #d1e6fb;
+}
