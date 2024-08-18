@@ -14,7 +14,6 @@
 
 /* Logo and flower border area*/
 .center-nav {
-    
     padding-left: 75px;
 }
 
@@ -34,7 +33,6 @@
 /* Menu button */
 .dropdown2 button {
     border-radius: 50%;
-    box-shadow: 1px 5px 5px 1px #888888;
 }
 
 @media screen and (max-width: 768px) {

@@ -18,7 +18,7 @@ export default function Header() {
                 </div>
 
                 <nav class="navbar d-flex flex-column align-items-center center-nav">
-                    <span class="navbar mb-0 pb-0 header-span">Avigails Paintings</span>
+                    <span class="navbar mb-0 pb-0 header-span">Avigails Art</span>
                     <img src={BorderPic} alt="flower-border" height={"70px"} />
                 </nav>
 
@@ -29,9 +29,8 @@ export default function Header() {
                         </button>
                         <div class="dropdown-menu p-2 m-2" aria-labelledby="dropdownMenuButton">
                             {/* Change to links */}
-                            <p>Action</p>
-                            <p>Another action</p>
-                            <p>Something else here</p>
+                            <p>Get in touch</p>
+                            <p>Purchase</p>
                         </div>
                     </div>
                 </div>
