@@ -1,6 +1,9 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 import './css/Home.css';
+import "./css/darkMode.css";
+
 import flower from "../images/flower.jpg"
 
 export default function Home() {

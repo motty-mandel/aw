@@ -4,20 +4,21 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./css/Header.css";
 import "./css/darkMode.css"
 
-import BorderPic from "../images/flower-border.png";
+import lightBorderPic from "../images/flower-border-light.png";
+import avigailProfile from "../images/avigailProfile.jpg";
 
 export default function Header() {
 
-    let btnName;
     const [theme, setTheme] = useState('Light');
+    const [btnName, setBtnName] = useState('Dark');
 
     const toggleTheme = () => {
         if (theme === 'Light') {
             setTheme('Dark');
-            btnName = 'Dark';
+            setBtnName('Light')
         } else {
             setTheme('Light');
-            btnName = 'Light'
+            setBtnName('Dark')
         }
     };
 
@@ -31,17 +32,13 @@ export default function Header() {
 
                 <header class="header d-flex flex-row align-items-center justify-content-between p-2">
 
-                    <div>
-                        <div class="dropdown button1">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Dropdown button
-                            </button>
-                        </div>
+                    <div class="profile">
+                        <img src={avigailProfile} alt="profile-pic" height={'150px'}/>
                     </div>
 
                     <nav class="navbar d-flex flex-column align-items-center center-nav">
                         <span class="navbar mb-0 pb-0 header-span">Avigails Art</span>
-                        <img src={BorderPic} alt="flower-border" height={"70px"} />
+                        <img src={lightBorderPic} alt="flower-border" height={"70px"} />
                     </nav>
 
                     <div>

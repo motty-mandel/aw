@@ -1,22 +1,23 @@
 :root {
-    --darkMode-color: antiquewhite;
+    --darkMode-lights: antiquewhite;
+    --darkMode-darks: rgb(34, 34, 34);
 }
 
 /* Header dark mode */
 .App-Dark .header {
-    color: var(--darkMode-color);
+    color: var(--darkMode-lights);
     background-color: rgb(34, 34, 34);
     transition: ease-in-out 500ms;
 }
 
 .App-Dark .dropdown2 .menuBtn {
-    background-color: var(--darkMode-color);
+    background-color: var(--darkMode-lights);
     color: black;
 }
 
 .App-Dark .dropdown2 .menuList {
     background-color: rgb(34, 34, 34);
-    color: var(--darkMode-color);
+    color: var(--darkMode-lights);
 }
 
 .App-Dark .dropdown2 .menuList button {
@@ -29,3 +30,28 @@
 }
 
 /* --------------------------------------- */
+/* Home dark mode */
+
+.Dark {
+    background-color: rgb(42, 42, 42);
+    transition: ease-in-out 500ms;
+}
+
+.Light {
+    background-color: white;
+    transition: ease-in-out 500ms;
+}
+
+.Dark .info {
+    background-color: var(--darkMode-lights);
+    transition: ease-in-out 500ms;
+}
+
+/* -------------------------------------------- */
+/* Footer dark mode */
+
+.Dark footer {
+    background-color: var(--darkMode-darks);
+    color: var(--darkMode-lights);
+    transition: ease-in-out 500ms;
+}

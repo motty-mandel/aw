@@ -1,3 +1,5 @@
 footer {
     background-color: #e5fdef;
+    color: rgb(33, 37, 41, 0.75);
+    transition: ease-in-out 500ms;
 }

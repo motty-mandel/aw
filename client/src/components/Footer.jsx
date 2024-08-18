@@ -1,13 +1,15 @@
 import React from "react";
+
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./css/Footer.css";
+import "./css/darkMode.css";
 
 export default function Footer() {
     return (
         <footer>
             {/* <!-- Footer --> */}
-            <footer class="text-center text-lg-start text-muted">
+            <footer class="text-center text-lg-start">
                 {/* <!-- Section: Social media --> */}
                 <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
                     {/* <!-- Left --> */}
