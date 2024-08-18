@@ -14,8 +14,9 @@
     "dotenv": "^16.4.5"
   },
   "scripts": {
+    "dev": "cd client && npm run dev",
     "start": "concurrently \"cd server && npm run watch\" \"cd client && npm run dev\"",
-    "build": "react-scripts build",
+    "build": "cd client && npm install && npm run build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
