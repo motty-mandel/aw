@@ -33,7 +33,7 @@ export default function Header() {
                 <header class="header d-flex flex-row align-items-center justify-content-between p-2">
 
                     <div class="profile">
-                        <img src={avigailProfile} alt="profile-pic" height={'150px'}/>
+                        <img src={avigailProfile} alt="profile-pic" height={'150px'} />
                     </div>
 
                     <nav class="navbar d-flex flex-column align-items-center center-nav">
@@ -41,19 +41,18 @@ export default function Header() {
                         <img src={lightBorderPic} alt="flower-border" height={"70px"} />
                     </nav>
 
-                    <div>
-                        <div class="btn-group dropleft dropdown2">
-                            <button class="btn dropdown-toggle menuBtn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Menu
-                            </button>
-                            <div class="dropdown-menu p-2 m-2 menuList" aria-labelledby="dropdownMenuButton">
-                                {/* Change to links */}
-                                <p>Get in touch</p>
-                                <p>Purchase</p>
-                                <button onClick={toggleTheme}>{btnName} mode</button>
-                            </div>
+                    <div class="btn-group dropleft dropdown2">
+                        <button class="btn dropdown-toggle menuBtn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Menu
+                        </button>
+                        <div class="dropdown-menu p-2 m-2 menuList" aria-labelledby="dropdownMenuButton">
+                            {/* Change to links */}
+                            <p>Get in touch</p>
+                            <p>Purchase</p>
+                            <button onClick={toggleTheme}>{btnName} mode</button>
                         </div>
                     </div>
+
 
                 </header>
 

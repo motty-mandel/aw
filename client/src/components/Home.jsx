@@ -37,16 +37,17 @@ export default function Home() {
 
     return (
 
-        <div className="container">
-            <div className="row">
+        <div class="container">
+            <div class="row">
 
                 {paintingsList.map((list) => (
-                    <div key={list.id} className="col-md-4 d-flex justify-content-center align-items-center">
-                        <div className="display">
-                            <div className="canvas">
-                                <img class="painting" src={list.image} alt="iphone" />
+                    <div key={list.id} class="col-md-4 d-flex justify-content-center">
+                        <div class="display">
+                            <div class="canvas">
+                                <img class="painting"
+                                 src={list.image} alt="iphone" />
                             </div>
-                            <div className="info">
+                            <div class="info">
                                 <p>Name: {list.name} <br />
                                  Price: {list.price}</p>
                             </div>
@@ -56,6 +57,7 @@ export default function Home() {
 
             </div>
         </div>
+
     );
 }
 
