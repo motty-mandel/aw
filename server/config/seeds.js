@@ -16,9 +16,15 @@ db.once('open', async () => {
     price: "300"
   });
 
-  const paintings = await Product.find();
+  await Product.create({
+    name: "Flower2",
+    price: "400"
+  });
 
-  console.log('Products seeded', paintings);
+  await Product.create({
+    name: "Cactus2",
+    price: "50"
+  });
 
   process.exit();
 });
