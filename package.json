@@ -15,9 +15,10 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "seed": "cd server && npm run seed",
     "dev": "cd client && npm run dev",
     "start": "concurrently \"cd server && npm run start\" \"cd client && npm run dev\"",
-    "build": "cd client && npm install && npm run build",
+    "build": "cd client && npm install && npm run build && cd ../server && npm install",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

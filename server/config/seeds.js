@@ -26,5 +26,10 @@ db.once('open', async () => {
     price: "50"
   });
 
+  await Product.create({
+    name: "Thorn2",
+    price: "150"
+  });
+
   process.exit();
 });
