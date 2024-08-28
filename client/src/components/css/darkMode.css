@@ -47,6 +47,10 @@
     transition: ease-in-out 500ms;
 }
 
+.Dark .painting {
+    border: 8px solid var(--darkMode-lights);
+}
+
 /* -------------------------------------------- */
 /* Footer dark mode */
 

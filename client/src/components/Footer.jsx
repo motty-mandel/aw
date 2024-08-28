@@ -4,12 +4,14 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./css/Footer.css";
 import "./css/darkMode.css";
+import "./css/footerMobile.css";
 
 export default function Footer() {
     return (
         <footer>
             {/* <!-- Footer --> */}
             <footer class="text-center text-lg-start">
+
                 {/* <!-- Section: Social media --> */}
                 <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
                     {/* <!-- Left --> */}
@@ -20,7 +22,7 @@ export default function Footer() {
 
                     {/* <!-- Right --> */}
                     <div>
-                        <a href="https://www.instagram.com/artby_avigail/" class="me-4 text-reset">
+                        <a href="https://www.instagram.com/artby_avigail/" class="me-4 text-reset instaLink">
                             <i class="fab fa-instagram"></i>
                         </a>
                     </div>
@@ -37,17 +39,16 @@ export default function Footer() {
                             <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                                 {/* <!-- Content --> */}
                                 <h6 class="text-uppercase fw-bold mb-4">
-                                    <i class="fas fa-gem me-3"></i>Company name
+                                    <i class="fas fa-gem me-3"></i>Avigails Art
                                 </h6>
                                 <p>
-                                    Here you can use rows and columns to organize your footer content. Lorem ipsum
-                                    dolor sit amet, consectetur adipisicing elit.
+                                    Here you'll write a little bio
                                 </p>
                             </div>
                             {/* <!-- Grid column --> */}
 
                             {/* <!-- Grid column --> */}
-                            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 products">
                                 {/* <!-- Links --> */}
                                 <h6 class="text-uppercase fw-bold mb-4">
                                     Products
@@ -68,7 +69,7 @@ export default function Footer() {
                             {/* <!-- Grid column --> */}
 
                             {/* <!-- Grid column --> */}
-                            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4 useful-links">
                                 {/* <!-- Links --> */}
                                 <h6 class="text-uppercase fw-bold mb-4">
                                     Useful links
@@ -95,7 +96,7 @@ export default function Footer() {
                                 <p><i class="fas fa-home me-3"></i> Toms River, NJ 08755, US</p>
                                 <p>
                                     <i class="fas fa-envelope me-3"></i>
-                                    info@example.com
+                                    avigailMandel@gmail.com
                                 </p>
                                 <p><i class="fas fa-phone me-3"></i> +1 (848) 201-0285 </p>
                             </div>

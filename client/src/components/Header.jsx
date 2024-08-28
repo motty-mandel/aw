@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./css/Header.css";
-import "./css/darkMode.css"
+import "./css/darkMode.css";
+import "./css/headerMobile.css";
 
 import lightBorderPic from "../images/flower-border-light.png";
 import avigailProfile from "../images/avigailProfile.jpg";
