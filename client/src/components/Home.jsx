@@ -24,10 +24,6 @@ export default function Home() {
         fetchPaintings();
     }, []);
 
-    useEffect(() => {
-        console.log(paintingsList);
-    }, [paintingsList]);
-
     return (
 
         <div class="container">
@@ -48,6 +44,7 @@ export default function Home() {
                     </div>
                 ))}
 
+                <p>Paintings List: {`${paintingsList}`}</p>
             </div>
         </div>
 
