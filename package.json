@@ -19,6 +19,8 @@
     "dev": "cd client && npm run dev",
     "start": "concurrently \"cd server && npm run start\" \"cd client && npm run dev\"",
     "build": "cd client && npm install && npm run build && cd ../server && npm install",
+    "serverInstall": "cd server && npm install",
+    "serverStart": "cd server && npm run start",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
