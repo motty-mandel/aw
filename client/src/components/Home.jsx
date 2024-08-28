@@ -14,7 +14,7 @@ export default function Home() {
     useEffect(() => {
         const fetchPaintings = async () => {
             try {
-                const response = await axios.get('https://192.168.1.162:5000/api/paintings');
+                const response = await axios.get('https://aw-backend.onrender.com/api/paintings');
                 setPaintingsList(response.data)
             } catch (error) {
                 console.error('Error fetching paintings', error);
@@ -44,7 +44,6 @@ export default function Home() {
                     </div>
                 ))}
 
-                <p>Paintings List: {`${paintingsList}`}</p>
             </div>
         </div>
 
