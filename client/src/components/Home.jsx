@@ -38,7 +38,7 @@ export default function Home() {
                             </div>
                             <div class="info">
                                 <p>Name: {painting.name} <br />
-                                 Price: {painting.price}</p>
+                                 Price: ${painting.price}</p>
                             </div>
                         </div>
                     </div>

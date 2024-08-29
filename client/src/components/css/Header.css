@@ -15,8 +15,6 @@
     margin: 40px 0 0 20px;
 }
 
-
-
 /* "Avigails Paintings" */
 .header-span {
     font-size: 80px;
@@ -28,7 +26,7 @@
 /* Menu button area*/
 .dropdown2 {
     padding-top: 40px;
-    margin-left: 60px;
+    margin-left: 55px;
 }
 
 /* Menu button */
@@ -38,6 +36,7 @@
     color: aliceblue;
 }
 
+/* Color mode button */
 .dropdown2 .menuList button {
     border: none;
     background: none;
@@ -47,4 +46,7 @@
     color: inherit;
 }
 
-
+.dropdown2 .menuList a {
+    color: black;
+    text-decoration: none;
+}

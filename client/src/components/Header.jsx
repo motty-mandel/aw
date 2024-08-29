@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./css/Header.css";
@@ -10,16 +11,20 @@ import avigailProfile from "../images/avigailProfile.jpg";
 
 export default function Header() {
 
-    const [theme, setTheme] = useState('Light');
+
+
+    const [theme, setTheme] = useState(localStorage.getItem('theme') || 'Light');
     const [btnName, setBtnName] = useState('Dark');
 
     const toggleTheme = () => {
         if (theme === 'Light') {
             setTheme('Dark');
             setBtnName('Light')
+            localStorage.setItem('theme', 'Dark');
         } else {
             setTheme('Light');
             setBtnName('Dark')
+            localStorage.setItem('theme', 'Light');
         }
     };
 
@@ -47,13 +52,12 @@ export default function Header() {
                             Menu
                         </button>
                         <div class="dropdown-menu p-2 m-2 menuList" aria-labelledby="dropdownMenuButton">
-                            {/* Change to links */}
-                            <p>Get in touch</p>
-                            <p>Purchase</p>
+                            <Link to={'/'}><p>Home</p></Link>
+                            <Link to={'/connect'}><p>Get in touch</p></Link>
+                            <Link to={'/purchases'}><p>Purchase</p></Link>
                             <button onClick={toggleTheme}>{btnName} mode</button>
                         </div>
                     </div>
-
 
                 </header>
 

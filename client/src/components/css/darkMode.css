@@ -29,6 +29,11 @@
     color: inherit;
 }
 
+.Dark .dropdown2 .menuList a {
+    color: var(--darkMode-lights);
+    text-decoration: none;
+}
+
 /* --------------------------------------- */
 /* Home dark mode */
 
