@@ -7,22 +7,38 @@ import "./css/darkMode.css";
 
 import flower from "../images/flower.jpg"
 
+
 export default function Home() {
 
     const [paintingsList, setPaintingsList] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const fetchPaintings = async () => {
             try {
+                setLoading(true);
                 const response = await axios.get('https://aw-backend.onrender.com/api/paintings');
                 setPaintingsList(response.data)
+                setLoading(false);
             } catch (error) {
                 console.error('Error fetching paintings', error);
+                setLoading(false);
             }
         };
 
         fetchPaintings();
     }, []);
+
+    if (loading) {
+        return (
+            <div class="d-flex justify-content-center mt-5 mb-5">
+                <div class="spinner-grow loading-screen" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+        );
+    }
+
 
     return (
 
@@ -34,11 +50,11 @@ export default function Home() {
                         <div class="display">
                             <div class="canvas">
                                 <img class="painting"
-                                 src={flower} alt="iphone" />
+                                    src={flower} alt="iphone" />
                             </div>
                             <div class="info">
                                 <p>Name: {painting.name} <br />
-                                 Price: ${painting.price}</p>
+                                    Price: ${painting.price}</p>
                             </div>
                         </div>
                     </div>

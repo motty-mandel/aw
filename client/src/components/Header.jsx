@@ -12,19 +12,20 @@ import avigailProfile from "../images/avigailProfile.jpg";
 export default function Header() {
 
 
-
     const [theme, setTheme] = useState(localStorage.getItem('theme') || 'Light');
-    const [btnName, setBtnName] = useState('Dark');
+    const [btnName, setBtnName] = useState(localStorage.getItem('themeBtn') || 'Dark');
 
     const toggleTheme = () => {
         if (theme === 'Light') {
             setTheme('Dark');
-            setBtnName('Light')
+            setBtnName('Light');
             localStorage.setItem('theme', 'Dark');
+            localStorage.setItem('themBtn', 'Light');
         } else {
             setTheme('Light');
-            setBtnName('Dark')
+            setBtnName('Dark');
             localStorage.setItem('theme', 'Light');
+            localStorage.setItem('themBtn', 'Dark');
         }
     };
 
@@ -47,15 +48,17 @@ export default function Header() {
                         <img src={lightBorderPic} alt="flower-border" height={"70px"} />
                     </nav>
 
-                    <div class="btn-group dropleft dropdown2">
-                        <button class="btn dropdown-toggle menuBtn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Menu
-                        </button>
-                        <div class="dropdown-menu p-2 m-2 menuList" aria-labelledby="dropdownMenuButton">
-                            <Link to={'/'}><p>Home</p></Link>
-                            <Link to={'/connect'}><p>Get in touch</p></Link>
-                            <Link to={'/purchases'}><p>Purchase</p></Link>
-                            <button onClick={toggleTheme}>{btnName} mode</button>
+                    <div class="menu">
+                        <div class="btn-group dropleft dropdown2">
+                            <button class="btn dropdown-toggle menuBtn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Menu
+                            </button>
+                            <div class="dropdown-menu p-2 m-2 menuList" aria-labelledby="dropdownMenuButton">
+                                <Link to={'/'}><p>Home</p></Link>
+                                <Link to={'/connect'}><p>Get in touch</p></Link>
+                                <Link to={'/purchases'}><p>Purchase</p></Link>
+                                <button onClick={toggleTheme}>{btnName} mode</button>
+                            </div>
                         </div>
                     </div>
 
