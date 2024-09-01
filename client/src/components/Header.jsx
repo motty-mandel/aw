@@ -20,12 +20,12 @@ export default function Header() {
             setTheme('Dark');
             setBtnName('Light');
             localStorage.setItem('theme', 'Dark');
-            localStorage.setItem('themBtn', 'Light');
+            localStorage.setItem('themeBtn', 'Light');
         } else {
             setTheme('Light');
             setBtnName('Dark');
             localStorage.setItem('theme', 'Light');
-            localStorage.setItem('themBtn', 'Dark');
+            localStorage.setItem('themeBtn', 'Dark');
         }
     };
 

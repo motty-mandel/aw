@@ -2,6 +2,7 @@ import React from "react";
 
 import "./css/Connect.css";
 import "./css/connectMobile.css";
+import "./css/darkMode.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Connect() {

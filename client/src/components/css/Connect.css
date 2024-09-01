@@ -1,22 +1,23 @@
-/* .connect-main {
-    background: url("../../images/revolver.jpg");
-} */
-
 .form {
+    font-weight: bold;
     margin: 100px 0 100px 0;
     width: 30%;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    background-color: #e5fdef;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37)
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    transition: ease-in-out 500ms;
 }
 
 .name-input, .email-input, .message-input{
-    margin: 50px 30% 50px 30%;
+    margin: 50px 20% 50px 20%;
 }
 
 .form-control {
     border: 3px solid!important;
+}
+
+.form-control:focus {
+    box-shadow: none;
 }
