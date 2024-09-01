@@ -1,0 +1,22 @@
+/* .connect-main {
+    background: url("../../images/revolver.jpg");
+} */
+
+.form {
+    margin: 100px 0 100px 0;
+    width: 30%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37)
+}
+
+.name-input, .email-input, .message-input{
+    margin: 50px 30% 50px 30%;
+}
+
+.form-control {
+    border: 3px solid!important;
+}
