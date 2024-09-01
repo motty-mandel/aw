@@ -31,10 +31,8 @@ export default function Home() {
 
     if (loading) {
         return (
-            <div class="d-flex justify-content-center mt-5 mb-5">
-                <div class="spinner-grow loading-screen" role="status">
-                    <span class="visually-hidden">Loading...</span>
-                </div>
+            <div className="loading-screen">
+                <p>Loading...</p>
             </div>
         );
     }

@@ -2,4 +2,7 @@ footer {
     background-color: #e5fdef;
     color: rgb(33, 37, 41, 0.75);
     transition: ease-in-out 500ms;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37)
 }
