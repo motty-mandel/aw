@@ -34,9 +34,16 @@
 
 /* Menu button */
 .dropdown2 .menuBtn {
+    color: white;
     border-radius: 50%;
     background-color: black;
-    color: aliceblue;
+}
+
+.dropdown2 .menuBtn:focus {
+    box-shadow: none;
+    border: none;
+    background-color: black;
+    color: white;
 }
 
 /* Color mode button */

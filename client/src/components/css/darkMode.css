@@ -56,6 +56,10 @@
     border: 8px solid var(--darkMode-lights);
 }
 
+.Dark .loading-screen {
+    color: var(--darkMode-lights);
+}
+
 /* -------------------------------------------- */
 /* Footer dark mode */
 

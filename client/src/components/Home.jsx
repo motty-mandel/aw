@@ -44,7 +44,7 @@ export default function Home() {
             <div class="row">
 
                 {paintingsList.map((painting) => (
-                    <div key={painting.id} class="col-md-4 d-flex justify-content-center">
+                    <div key={painting.id} class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
                         <div class="display">
                             <div class="canvas">
                                 <img class="painting"
