@@ -20,6 +20,14 @@
     .dropdown2 {
         margin: 0;
     }
+
+    .menu-list {
+        display: block;
+    }
+
+    .main-window {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 600px) {

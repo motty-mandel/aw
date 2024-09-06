@@ -7,7 +7,8 @@
 
 .painting {
     height: 300px;
-    border-radius: 20px 20px 0 0;
+    border-radius: 20px 20px 20px 20px;
+    border: 10px solid #e5fdef;
     cursor: pointer;
     transition: ease-in-out 200ms;
 }
@@ -36,7 +37,7 @@
 }
 
 .painting:hover {
-    box-shadow: -6px -6px 10px 3px #954e4e, 6px -6px 10px 3px #954e4e;
+    box-shadow: 6px 6px 10px 3px #595959, -6px 6px 10px 3px #595959, -6px -6px 10px 3px #595959, 6px -6px 10px 3px #595959;
 }
 
 .loading-screen {

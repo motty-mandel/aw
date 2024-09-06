@@ -1,11 +1,16 @@
+:root {
+    --main-background: #e5fdef;
+}
+
 /* Header settings */
 .header {
-    background-color: #e5fdef;
+    width: 100vw;
+    background-color: var(--main-background);
     margin-top: -40px;
     padding: 20px 0px 0px 0px;
     font-size: 20px;
     font-weight: bold;
-    transition: ease-in-out 500ms;
+    transition: transform ease-in-out 500ms;
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37)
@@ -26,38 +31,47 @@
     font-style: normal;
 }
 
-/* Menu button area*/
-.dropdown2 {
+.right-nav {
     padding-top: 40px;
-    margin-left: 59.418px;
 }
 
-/* Menu button */
-.dropdown2 .menuBtn {
-    color: white;
-    border-radius: 50%;
-    background-color: black;
+.main-window {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 100px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    box-shadow: 3px 3px 5px black, -3px -3px 5px black, -3px 3px 5px black, 3px -3px 5px black;
 }
-
-.dropdown2 .menuBtn:focus {
-    box-shadow: none;
-    border: none;
-    background-color: black;
-    color: white;
-}
-
-/* Color mode button */
-.dropdown2 .menuList button {
-    border: none;
-    background: none;
-    padding: 0;
+  
+.window {
+    height: 70%;
+    width: 85%;
+    background-color: var(--main-background);
+    border-radius: 20px;
+    box-shadow: 3px 3px 5px black, -3px -3px 5px black, -3px 3px 5px black, 3px -3px 5px black;
     cursor: pointer;
-    font: inherit;
-    color: inherit;
 }
 
-/* Menu links */
-.dropdown2 .menuList a {
-    color: black;
+.window p {
+    margin: 0;
+    font-family: "Grey Qo", cursive;
+}
+  
+.window:active {
+    box-shadow: none;
+    border: 3px solid black;
+}
+
+.menu-list {
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.menu-list a {
     text-decoration: none;
+    color: black;
 }
