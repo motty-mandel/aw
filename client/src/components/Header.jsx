@@ -88,25 +88,20 @@ export default function Header() {
                     </nav>
 
                     <div class="right-nav d-flex align-items-center" id="right-nav">
-
-                        {!menuVisible && (
-                            <div class="main-window" id="main-window">
-                                <div onClick={menu} class="window d-flex align-items-center justify-content-center">
-                                    <p>MENU</p>
-                                </div>
+                        <div class="btn-group dropleft">
+                            <button type="button" class="btn-md btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                MENU
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
                             </div>
-                        )}
-
+                        </div>
                     </div>
 
                 </header>
-                {menuVisible && (
-                    <div class="menu-list">
-                        <Link to={'/'} onClick={resetMenu}><p>Home</p></Link>
-                        <Link to={'/connect'} onClick={resetMenu}><p>Get in touch</p></Link>
-                        <Link to={'/purchases'} onClick={resetMenu}><p>Purchase</p></Link>
-                    </div>
-                )}
+
             </div>
         </div>
     );
