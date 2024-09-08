@@ -17,16 +17,8 @@
         align-items: center!important;
     }
 
-    .dropdown2 {
+    .btn-md {
         margin: 0;
-    }
-
-    .menu-list {
-        display: block;
-    }
-
-    .main-window {
-        display: none;
     }
 }
 
@@ -56,10 +48,6 @@
     .center-nav {
         padding-top: 20px;
     }
-
-    .dropdown2 button {
-        font-size: small;
-    }
 }
 
 @media screen and (max-width: 400px) {
@@ -73,9 +61,5 @@
 
     .center-nav {
         padding-top: 20px;
-    }
-
-    .dropdown2 button {
-        font-size: x-small;
     }
 }

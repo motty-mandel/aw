@@ -7,10 +7,9 @@
     width: 100vw;
     background-color: var(--main-background);
     margin-top: -40px;
-    padding: 20px 0px 0px 0px;
     font-size: 20px;
     font-weight: bold;
-    transition: transform ease-in-out 500ms;
+    transition: ease-in-out 500ms;
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37)
@@ -40,8 +39,7 @@
     border-radius: 15%;
     background-color: white;
     color: gray;
-    margin-left: 60.64;
-
+    margin-left: 60.64px;
 }
 
 .btn-md.btn-secondary:focus,
@@ -51,4 +49,14 @@
     outline: none!important;
     background-color: white!important;
     color: gray!important;
+}
+
+.dropdown-menu p {
+    cursor: pointer;
+    margin: 5px;
+    color: black;
+}
+
+.dropdown-menu a {
+    text-decoration: none;
 }
