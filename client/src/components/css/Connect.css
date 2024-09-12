@@ -4,14 +4,16 @@
     width: 30%;
     background-color: #e5fdef;
     backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
     border-radius: 10px;
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
     transition: ease-in-out 500ms;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .name-input, .email-input, .message-input{
-    margin: 50px 20% 50px 20%;
+    margin: 30px 20% 30px 20%;
 }
 
 .form-control {
@@ -20,4 +22,8 @@
 
 .form-control:focus {
     box-shadow: none;
+}
+
+form button {
+    margin: 0 100px 20px;
 }

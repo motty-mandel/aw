@@ -1,10 +1,54 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
+import { Elements } from '@stripe/react-stripe-js';
+import { loadStripe } from '@stripe/stripe-js';
+import CheckoutForm from '../CheckoutForm';
+
+const stripePromise = loadStripe('pk_test_51Pwu4R08itiWYv2Z477neCpMwwy77S6L0S3gEgpfpvJSfvg5uH5CiwdfpW2UArLWWW1rM1UWVKBRmLZiP9bVRWar00bLJ0QJJr');
 
 export default function Purchases() {
+    const [clientSecret, setClientSecret] = useState('');
+    const [error, setError] = useState(null);
+
+    useEffect(() => {
+        // Call your backend to create the PaymentIntent and get the client secret
+        fetch('http://localhost:5000/create-payment-intent', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ amount: 1000 }), // Replace with the actual amount
+        })
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then((data) => {
+                if (data.clientSecret) {
+                    setClientSecret(data.clientSecret);
+                } else {
+                    throw new Error('Client secret not found in response');
+                }
+            })
+            .catch((error) => {
+                console.error('Error fetching client secret:', error);
+                setError(error.message);
+            });
+    }, []);
+
+    const options = {
+        clientSecret,
+    };
+
     return (
         <div>
-            <h1>Purchases</h1>
-            <p>Buy some art</p>
+            {error && <div className="error">{error}</div>}
+            {clientSecret && (
+                <Elements stripe={stripePromise} options={options}>
+                    <CheckoutForm />
+                </Elements>
+            )}
         </div>
     );
 }

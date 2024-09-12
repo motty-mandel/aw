@@ -2,18 +2,19 @@ require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const stripe = require('stripe')('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');
 
 const app = express();
 app.use(cors());
 app.use(express.json());
 
-mongoose.connect(process.env.MONGODB_URL);
+// mongoose.connect(process.env.MONGODB_URL);
 
-const db = mongoose.connection;
-db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', function() {
-    console.log('Connected to MongoDB');
-});
+// const db = mongoose.connection;
+// db.on('error', console.error.bind(console, 'connection error:'));
+// db.once('open', function () {
+//     console.log('Connected to MongoDB');
+// });
 
 const Product = require('./models/Product.js');
 
@@ -27,7 +28,24 @@ app.get('/api/paintings', async (req, res) => {
     }
 });
 
+app.post('/create-payment-intent', async (req, res) => {
+    const { amount } = req.body;
+
+    try {
+        const paymentIntent = await stripe.paymentIntents.create({
+            amount,
+            currency: 'usd',
+        });
+
+        res.send({
+            clientSecret: paymentIntent.client_secret,
+        });
+    } catch (error) {
+        res.status(500).send({ error: error.message });
+    }
+});
+
 const PORT = process.env.PORT || 5000;
-app.listen(PORT , () => {
+app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });

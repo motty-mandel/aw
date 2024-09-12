@@ -52,6 +52,8 @@
 }
 
 .dropdown-menu p {
+    font-size: x-large;
+    font-family: "Grey Qo", cursive;
     cursor: pointer;
     margin: 5px;
     color: black;

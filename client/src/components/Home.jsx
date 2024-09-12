@@ -5,39 +5,52 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/Home.css';
 import "./css/homeMobile.css";
 import "./css/darkMode.css";
-
-import flower from "../images/flower.jpg"
-
+import road from "../images/road-fireworks.jpg";
+import hibiscus from "../images/hibiscus.jpg";
 
 export default function Home() {
 
-    const [paintingsList, setPaintingsList] = useState([]);
-    const [loading, setLoading] = useState(true);
+    // const [paintingsList, setPaintingsList] = useState([]);
+    // const [loading, setLoading] = useState(true);
 
-    useEffect(() => {
-        const fetchPaintings = async () => {
-            try {
-                setLoading(true);
-                const response = await axios.get('https://aw-backend.onrender.com/api/paintings');
-                setPaintingsList(response.data)
-                setLoading(false);
-            } catch (error) {
-                console.error('Error fetching paintings', error);
-                setLoading(false);
-            }
-        };
+    // useEffect(() => {
+    //     const fetchPaintings = async () => {
+    //         try {
+    //             setLoading(true);
+    //             const response = await axios.get('https://aw-backend.onrender.com/api/paintings');
+    //             setPaintingsList(response.data)
+    //             setLoading(false);
+    //         } catch (error) {
+    //             console.error('Error fetching paintings', error);
+    //             setLoading(false);
+    //         }
+    //     };
 
-        fetchPaintings();
-    }, []);
+    //     fetchPaintings();
+    // }, []);
 
-    if (loading) {
-        return (
-            <div className="loading-screen">
-                <p>Loading...</p>
-            </div>
-        );
-    }
+    // if (loading) {
+    //     return (
+    //         <div className="loading-screen">
+    //             <p>Loading...</p>
+    //         </div>
+    //     );
+    // }
 
+    const paintingsList = [
+        {
+            id: 1,
+            image: road,
+            name: "Road to Nowhere",
+            price: "500"
+        },
+        {
+            id: 2,
+            image: hibiscus,
+            name: "Hibiscus",
+            price: "600"
+        },
+    ]
 
     return (
 
@@ -49,7 +62,7 @@ export default function Home() {
                         <div class="display">
                             <div class="canvas">
                                 <img class="painting"
-                                    src={flower} alt="iphone" />
+                                    src={painting.image} alt={painting.name} />
                             </div>
                             <div class="info">
                                 <p>Name: {painting.name} <br />

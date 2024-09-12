@@ -6,6 +6,7 @@ import App from './app';
 import Home from './components/Home';
 import Connect from './components/Connect';
 import Purchases from './components/Purchases';
+import Sets from './components/Sets';
 
 
 const router = createBrowserRouter([
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
             {
                 path: '/purchases',
                 element: <Purchases />
+            },
+            {
+                path: '/sets',
+                element: <Sets />
             }
         ]
     }
