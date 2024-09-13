@@ -4,7 +4,7 @@ import { loadStripe } from '@stripe/stripe-js';
 import CheckoutForm from '../CheckoutForm';
 
 // require('dotenv').config;
-const stripePromise = loadStripe("process.env.STRIPE_SECRET");
+const stripePromise = loadStripe("my stripe hiddenness");
 
 export default function Purchases() {
     const [clientSecret, setClientSecret] = useState('');
