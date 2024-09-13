@@ -3,8 +3,8 @@ import { Elements } from '@stripe/react-stripe-js';
 import { loadStripe } from '@stripe/stripe-js';
 import CheckoutForm from '../CheckoutForm';
 
-require('dotenv').config;
-const stripePromise = loadStripe(process.env.STRIPE_SECRET);
+// require('dotenv').config;
+const stripePromise = loadStripe("process.env.STRIPE_SECRET");
 
 export default function Purchases() {
     const [clientSecret, setClientSecret] = useState('');

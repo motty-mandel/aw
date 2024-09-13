@@ -1,0 +1,51 @@
+.main-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.canvasSets {
+    width: 300px;
+    margin: 50px 0px 0 0px;
+}
+
+.paintingSets {
+    width: 300px;
+    border-radius: 20px 20px 20px 20px;
+    border: 10px solid #e5fdef;
+    cursor: pointer;
+    transition: ease-in-out 200ms;
+}
+
+.info p {
+    margin: 0;
+    font-weight: bold;
+    line-height: 2rem;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    background-color: #e5fdef;
+    margin: 0 0 50px 0;
+    padding: 10px;
+    border-radius: 10px;
+    transition: ease-in-out 500ms;
+}
+
+.paintingSets:hover {
+    box-shadow: 6px 6px 10px 3px #595959, -6px 6px 10px 3px #595959, -6px -6px 10px 3px #595959, 6px -6px 10px 3px #595959;
+}
+
+.loading-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 190px - 348px);
+    font-size: 24px;
+    font-weight: bold;
+    transition: ease-in-out 500ms;
+}
