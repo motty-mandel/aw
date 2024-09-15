@@ -41,7 +41,7 @@ export default function Home() {
         {
             id: 1,
             image: road,
-            name: "Road to Nowhere",
+            name: "Celebration",
             price: "500"
         },
         {

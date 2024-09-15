@@ -35,11 +35,26 @@
 }
 
 .Dark .painting {
-    border: 8px solid var(--darkMode-lights);
+    border: 10px solid var(--darkMode-lights);
 }
 
 .Dark .loading-screen {
     color: var(--darkMode-lights);
+}
+
+.Dark .painting:hover {
+    box-shadow: 6px 6px 10px 3px #ffffff, -6px 6px 10px 3px #ffffff, -6px -6px 10px 3px #ffffff, 6px -6px 10px 3px #ffffff;
+}
+
+/* -------------------------------------------- */
+/* Sets drak mode */
+
+.Dark .paintingSets {
+    border: 10px solid var(--darkMode-lights);
+}
+
+.Dark .paintingSets:hover {
+    box-shadow: 6px 6px 10px 3px #ffffff, -6px 6px 10px 3px #ffffff, -6px -6px 10px 3px #ffffff, 6px -6px 10px 3px #ffffff;
 }
 
 /* -------------------------------------------- */
