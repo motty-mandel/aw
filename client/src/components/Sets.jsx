@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./css/Sets.css";
 import abstractFlowers from "../images/abstract-flowers.jpg";
 
 export default function Sets() {
+
+    const navigate = useNavigate();
 
     // const [paintingsList, setPaintingsList] = useState([]);
     // const [loading, setLoading] = useState(true);
@@ -40,7 +43,11 @@ export default function Sets() {
             name: "Flowers",
             price: "500"
         },
-    ]
+    ];
+
+    const handlePaintingClick = (painting) => {
+        navigate('/showroom', { state: { painting } });
+    };
 
     return (
 

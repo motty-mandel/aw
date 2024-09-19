@@ -1,0 +1,17 @@
+.showroom {
+    margin: 0;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image {
+    height: 600px;
+}
+
+.carousel {
+    margin: 0;
+    padding: 0;
+    max-width: 477.6px;
+}

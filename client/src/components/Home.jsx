@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -37,6 +38,8 @@ export default function Home() {
     //     );
     // }
 
+    const navigate = useNavigate();
+
     const paintingsList = [
         {
             id: 1,
@@ -50,7 +53,11 @@ export default function Home() {
             name: "Hibiscus",
             price: "600"
         },
-    ]
+    ];
+
+    const handlePaintingClick = (painting) => {
+        navigate('/showroom', { state: { painting } });
+    };
 
     return (
 
@@ -60,7 +67,7 @@ export default function Home() {
                 {paintingsList.map((painting) => (
                     <div key={painting.id} class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
                         <div class="display">
-                            <div class="canvas">
+                            <div class="canvas" onClick={() => handlePaintingClick(painting)}>
                                 <img class="painting"
                                     src={painting.image} alt={painting.name} />
                             </div>

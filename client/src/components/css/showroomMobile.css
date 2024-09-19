@@ -1,0 +1,9 @@
+@media screen and (max-width: 768px){
+    .image {
+        height: 400px;
+    }
+
+    .carousel {
+        width: 315px;
+    }
+}
