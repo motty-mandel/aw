@@ -1,0 +1,5 @@
+@media screen and (max-width: 768px) {
+    .paintingSets {
+        box-shadow: 6px 6px 10px 3px #595959, -6px 6px 10px 3px #595959, -6px -6px 10px 3px #595959, 6px -6px 10px 3px #595959;
+    }
+}

@@ -12,11 +12,7 @@ const Showroom = () => {
     const { painting } = location.state;
 
     const carouselImages = [
-        // Add URLs of different shots of the painting
         painting.image,
-        h,
-        rf,
-        // Add more shots as needed
     ];
 
     return (

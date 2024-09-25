@@ -3,7 +3,11 @@ import { useNavigate } from 'react-router-dom';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./css/Sets.css";
-import abstractFlowers from "../images/abstract-flowers.jpg";
+import "./css/setsMobile.css";
+
+import abstractFlowers1 from "../images/abstract-flowers-1.jpg";
+import abstractFlowers2 from "../images/abstract-flowers-2.jpg";
+import abstractFlowers3 from "../images/abstract-flowers-3.jpg";
 
 export default function Sets() {
 
@@ -39,8 +43,20 @@ export default function Sets() {
     const paintingsList = [
         {
             id: 1,
-            image: abstractFlowers,
-            name: "Flowers",
+            image: abstractFlowers1,
+            name: "Single flowers",
+            price: "500"
+        },
+        {
+            id: 2,
+            image: abstractFlowers2,
+            name: "Double flowers",
+            price: "500"
+        },
+        {
+            id: 3,
+            image: abstractFlowers3,
+            name: "Triple flowers",
             price: "500"
         },
     ];
