@@ -31,7 +31,7 @@ export default function Footer() {
                 {/* <!-- Section: Social media --> */}
 
                 {/* <!-- Section: Links  --> */}
-                <section class="">
+                <section class="bio">
                     <div class="container text-center text-md-start mt-5">
                         {/* <!-- Grid row --> */}
                         <div class="row mt-3">
@@ -41,8 +41,12 @@ export default function Footer() {
                                 <h6 class="text-uppercase fw-bold mb-4">
                                     <i class="fas fa-gem me-3"></i>Avigails Art
                                 </h6>
-                                <p>
-                                    Here you'll write a little bio
+                                <p class="bio-text">
+                                    Art means different things to different people.
+                                    To me it means an outlet for my joy, pain, distress, excitement, love
+                                    and hurt. Each piece means something to me, and something else entirely to you,
+                                    but thats how it is supposed to be. Never bottle up your feelings. There is 
+                                    always a way to express it, you just have to find your way.
                                 </p>
                             </div>
                             {/* <!-- Grid column --> */}
