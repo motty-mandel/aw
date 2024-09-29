@@ -45,19 +45,19 @@ export default function Sets() {
             id: 1,
             image: abstractFlowers1,
             name: "Single flowers",
-            price: "500"
+            price: "125"
         },
         {
             id: 2,
             image: abstractFlowers2,
             name: "Double flowers",
-            price: "500"
+            price: "125"
         },
         {
             id: 3,
             image: abstractFlowers3,
             name: "Triple flowers",
-            price: "500"
+            price: "125"
         },
     ];
 
@@ -73,7 +73,7 @@ export default function Sets() {
                 {paintingsList.map((painting) => (
                     <div key={painting.id} class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
                         <div class="displaySets">
-                            <div class="canvasSets">
+                            <div class="canvasSets" onClick={() => handlePaintingClick(painting)}>
                                 <img class="paintingSets"
                                     src={painting.image} alt={painting.name} />
                             </div>

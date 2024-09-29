@@ -50,37 +50,37 @@ export default function Home() {
             id: 1,
             image: road,
             name: "Celebration",
-            price: "500"
+            price: "125"
         },
         {
             id: 2,
             image: hibiscus,
             name: "Hibiscus",
-            price: "500"
+            price: "125"
         },
         {
             id: 3,
             image: perspective,
             name: "It's all about perspective",
-            price: "500"
+            price: "125"
         },
         {
             id: 4,
             image: meltedHeart,
             name: "Melted heart",
-            price: "500"
+            price: "125"
         },
         {
             id: 5,
             image: check,
             name: "Check",
-            price: "500"
+            price: "125"
         },
         {
             id: 6,
             image: ex,
             name: "Ex",
-            price: "500"
+            price: "125"
         },
     ];
 
