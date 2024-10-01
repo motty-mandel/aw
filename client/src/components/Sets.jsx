@@ -14,6 +14,7 @@ import ex from "../images/ex.jpg";
 export default function Sets() {
 
     const navigate = useNavigate();
+    const [imageClasses, setImageClasses] = useState({});
 
     // const [paintingsList, setPaintingsList] = useState([]);
     // const [loading, setLoading] = useState(true);
@@ -79,14 +80,13 @@ export default function Sets() {
         navigate('/showroom', { state: { painting } });
     };
 
-    const getImageClass = (image) => {
-        const img = new Image();
-        img.src = image;
-        if (img.width > img.height) {
-            return "landscape";
-        } else {
-            return "portrait";
-        }
+    const handleImageLoad = (id, event) => {
+        const img = event.target;
+        const newClass = img.naturalWidth > img.naturalHeight ? "landscape" : "portrait";
+        setImageClasses((prevClasses) => ({
+            ...prevClasses,
+            [id]: newClass
+        }));
     };
 
     return (
@@ -98,8 +98,12 @@ export default function Sets() {
                     <div key={painting.id} class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
                         <div class="displaySets">
                             <div class="canvasSets" onClick={() => handlePaintingClick(painting)}>
-                                <img class={`paintingSets ${getImageClass(painting.image)}`}
-                                    src={painting.image} alt={painting.name} />
+                            <img
+                                    className={`paintingSets ${imageClasses[painting.id] || ''}`}
+                                    src={painting.image}
+                                    alt={painting.name}
+                                    onLoad={(event) => handleImageLoad(painting.id, event)}
+                                />
                             </div>
                             <div class="info">
                                 <p>Name: {painting.name} <br />
