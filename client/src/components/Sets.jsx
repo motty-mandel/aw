@@ -8,6 +8,8 @@ import "./css/setsMobile.css";
 import abstractFlowers1 from "../images/abstract-flowers-1.jpg";
 import abstractFlowers2 from "../images/abstract-flowers-2.jpg";
 import abstractFlowers3 from "../images/abstract-flowers-3.jpg";
+import check from "../images/check.jpg";
+import ex from "../images/ex.jpg";
 
 export default function Sets() {
 
@@ -59,10 +61,32 @@ export default function Sets() {
             name: "Triple flowers",
             price: "125"
         },
+        {
+            id: 5,
+            image: check,
+            name: "Check",
+            price: "125"
+        },
+        {
+            id: 6,
+            image: ex,
+            name: "Ex",
+            price: "125"
+        },
     ];
 
     const handlePaintingClick = (painting) => {
         navigate('/showroom', { state: { painting } });
+    };
+
+    const getImageClass = (image) => {
+        const img = new Image();
+        img.src = image;
+        if (img.width > img.height) {
+            return "landscape";
+        } else {
+            return "portrait";
+        }
     };
 
     return (
@@ -74,7 +98,7 @@ export default function Sets() {
                     <div key={painting.id} class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
                         <div class="displaySets">
                             <div class="canvasSets" onClick={() => handlePaintingClick(painting)}>
-                                <img class="paintingSets"
+                                <img class={`paintingSets ${getImageClass(painting.image)}`}
                                     src={painting.image} alt={painting.name} />
                             </div>
                             <div class="info">

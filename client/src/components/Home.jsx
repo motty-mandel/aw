@@ -11,8 +11,7 @@ import road from "../images/road-fireworks.jpg";
 import hibiscus from "../images/hibiscus.jpg";
 import perspective from "../images/perspective.jpg";
 import meltedHeart from "../images/melted-heart.jpg";
-import check from "../images/check.jpg";
-import ex from "../images/ex.jpg";
+
 
 export default function Home() {
 
@@ -69,19 +68,7 @@ export default function Home() {
             image: meltedHeart,
             name: "Melted heart",
             price: "125"
-        },
-        {
-            id: 5,
-            image: check,
-            name: "Check",
-            price: "125"
-        },
-        {
-            id: 6,
-            image: ex,
-            name: "Ex",
-            price: "125"
-        },
+        }
     ];
 
     const handlePaintingClick = (painting) => {

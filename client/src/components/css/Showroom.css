@@ -18,5 +18,8 @@
 
 .backButton {
     margin: 20px 0 0 50px;
+}
+
+.backButton p {
     cursor: pointer;
 }

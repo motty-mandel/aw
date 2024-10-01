@@ -39,13 +39,3 @@
 .painting:hover {
     box-shadow: 6px 6px 10px 3px #595959, -6px 6px 10px 3px #595959, -6px -6px 10px 3px #595959, 6px -6px 10px 3px #595959;
 }
-
-.loading-screen {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: calc(100vh - 190px - 348px);
-    font-size: 24px;
-    font-weight: bold;
-    transition: ease-in-out 500ms;
-}
