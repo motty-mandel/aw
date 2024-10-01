@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import Carousel from 'react-bootstrap/Carousel';
 
@@ -16,9 +16,9 @@ const Showroom = () => {
         painting.image,
     ];
 
-    // const goBack = () => {
-    //     navigate(-1);
-    // }
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     return (
         <>
