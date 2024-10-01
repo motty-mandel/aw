@@ -55,10 +55,6 @@ export default function Footer() {
                                 {/* <!-- Links --> */}
                                 <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
                                 <p><i class="fas fa-home me-3"></i> Toms River, NJ 08755, US</p>
-                                <p>
-                                    <i class="fas fa-envelope me-3"></i>
-                                    avigailMandel@gmail.com
-                                </p>
                                 <p><i class="fas fa-phone me-3"></i> +1 (848) 201-0285 </p>
                             </div>
                             {/* <!-- Grid column --> */}
