@@ -1,5 +1,5 @@
 import React from 'react';
-import { Outlet, BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Outlet, BrowserRouter } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import './index.css';
@@ -12,6 +12,6 @@ function App() {
             <Footer />
         </div>
     );
-}
+};
 
 export default App;

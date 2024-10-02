@@ -8,8 +8,7 @@ import Connect from './components/Connect';
 // import Purchases from './components/Purchases';
 import Sets from './components/Sets';
 import Showroom from './components/Showroom';
-import Temp from "./components/temp"
-
+import Temp from "./components/temp";
 
 const router = createBrowserRouter([
     {
