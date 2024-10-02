@@ -56,6 +56,7 @@ export default function Header() {
                                 <Link to={'/'}><p>Home</p></Link>
                                 <Link to={'/sets'}><p>Painting sets</p></Link>
                                 <Link to={'/connect'}><p>Connect</p></Link>
+                                <Link to={'/temp'}><p style={{ display: 'none' }}>hi</p></Link>
                                 {/* <Link to={'/purchases'}><p>Purchase</p></Link> */}
                                 <p onClick={toggleTheme}>{btnName} mode</p>
                             </div>
