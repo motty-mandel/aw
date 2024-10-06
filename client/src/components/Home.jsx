@@ -47,24 +47,18 @@ export default function Home() {
     const paintingsList = [
         {
             id: 1,
-            image: road,
-            name: "Celebration",
-            price: "125"
-        },
-        {
-            id: 2,
             image: hibiscus,
             name: "Hibiscus",
             price: "125"
         },
         {
-            id: 3,
+            id: 2,
             image: perspective,
             name: "It's all about perspective",
             price: "125"
         },
         {
-            id: 4,
+            id: 3,
             image: meltedHeart,
             name: "Melted heart",
             price: "125"
