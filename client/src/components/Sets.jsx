@@ -1,80 +1,33 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./css/Sets.css";
 import "./css/setsMobile.css";
 
-import abstractFlowers1 from "../images/abstract-flowers-1.jpg";
-import abstractFlowers2 from "../images/abstract-flowers-2.jpg";
-import abstractFlowers3 from "../images/abstract-flowers-3.jpg";
-import check from "../images/check.jpg";
-import ex from "../images/ex.jpg";
-
 export default function Sets() {
 
+    const [paintingsList, setPaintingsList] = useState([]);
+    const [loading, setLoading] = useState(true); 
     const navigate = useNavigate();
     const [imageClasses, setImageClasses] = useState({});
 
-    // const [paintingsList, setPaintingsList] = useState([]);
-    // const [loading, setLoading] = useState(true);
+    useEffect(() => {
+        const fetchPaintings = async () => {
+            try {
+                setLoading(true);
+                const response = await axios.get('http://localhost:5000/api/sets');
+                setPaintingsList(response.data);
+                setLoading(false);
+            } catch (err) {
+                console.error('Error fetching paaintings', err);
+                setLoading(false);
+            }
+        };
 
-    // useEffect(() => {
-    //     const fetchPaintings = async () => {
-    //         try {
-    //             setLoading(true);
-    //             const response = await axios.get('https://aw-backend.onrender.com/api/paintings');
-    //             setPaintingsList(response.data)
-    //             setLoading(false);
-    //         } catch (error) {
-    //             console.error('Error fetching paintings', error);
-    //             setLoading(false);
-    //         }
-    //     };
-
-    //     fetchPaintings();
-    // }, []);
-
-    // if (loading) {
-    //     return (
-    //         <div className="loading-screen">
-    //             <p>Loading...</p>
-    //         </div>
-    //     );
-    // }
-
-    const paintingsList = [
-        {
-            id: 1,
-            image: abstractFlowers1,
-            name: "Single flowers",
-            price: "125"
-        },
-        {
-            id: 2,
-            image: abstractFlowers2,
-            name: "Double flowers",
-            price: "125"
-        },
-        {
-            id: 3,
-            image: abstractFlowers3,
-            name: "Triple flowers",
-            price: "125"
-        },
-        {
-            id: 5,
-            image: check,
-            name: "Check",
-            price: "125"
-        },
-        {
-            id: 6,
-            image: ex,
-            name: "Ex",
-            price: "125"
-        },
-    ];
+        fetchPaintings();
+    }, []);
 
     const handlePaintingClick = (painting) => {
         navigate('/showroom', { state: { painting } });
@@ -89,8 +42,15 @@ export default function Sets() {
         }));
     };
 
-    return (
+    if (loading) {
+        return (
+            <div>
+                Loading...
+            </div>
+        )
+    }
 
+    return (
         <div class="container">
             <div class="row">
 
@@ -100,7 +60,7 @@ export default function Sets() {
                             <div class="canvasSets" onClick={() => handlePaintingClick(painting)}>
                             <img
                                     className={`paintingSets ${imageClasses[painting.id] || ''}`}
-                                    src={painting.image}
+                                    src={`http://localhost:5000${painting.image}`}
                                     alt={painting.name}
                                     onLoad={(event) => handleImageLoad(painting.id, event)}
                                 />
