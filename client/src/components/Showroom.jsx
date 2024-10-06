@@ -8,32 +8,40 @@ import "./css/showroomMobile.css";
 
 const Showroom = () => {
 
-    const navigate =  useNavigate();
+    const navigate = useNavigate();
     const location = useLocation();
-    const { painting } = location.state;
+    const { painting } = location.state || {};
 
     const carouselImages = [
-        painting.image,
+        `https://aw-backend.onrender.com/${painting.image}`,
     ];
 
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
 
+    if (!painting) {
+        return (
+            <div class="error">
+                <p>No painting data available. <span className="fa-solid fa-arrow-left" onClick={() => navigate(-1)}> Go back</span></p>
+            </div>
+        );
+    }
+
     return (
         <>
-        <div class="backButton">
-            <p class="fa-solid fa-arrow-left" onClick={() => navigate(-1)}> Back</p>
-        </div>
-        <div className="showroom">
-            <Carousel interval={null}>
-                {carouselImages.map((image, index) => (
-                    <Carousel.Item key={index}>
-                        <img className="image" src={image} alt={`Slide ${index}`} />
-                    </Carousel.Item>
-                ))}
-            </Carousel>
-        </div>
+            <div class="backButton">
+                <p class="fa-solid fa-arrow-left" onClick={() => navigate(-1)}> Back</p>
+            </div>
+            <div className="showroom">
+                <Carousel interval={null}>
+                    {carouselImages.map((image, index) => (
+                        <Carousel.Item key={index}>
+                            <img className="image" src={image} alt={`Slide ${index}`} />
+                        </Carousel.Item>
+                    ))}
+                </Carousel>
+            </div>
         </>
     );
 };

@@ -30,7 +30,7 @@ export default function Sets() {
     }, []);
 
     const handlePaintingClick = (painting) => {
-        navigate('/showroom', { state: { painting } });
+        navigate('/showroom', { state: { painting} });
     };
 
     const handleImageLoad = (id, event) => {
