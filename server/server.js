@@ -1,8 +1,6 @@
 require('dotenv').config();
 const express = require('express');
-const mongoose = require('mongoose');
 const cors = require('cors');
-const stripe = require('stripe')("my stripe hiddenness");
 
 const app = express();
 app.use(cors());
@@ -15,18 +13,21 @@ const paintings = [
         image: "/images/hibiscus.jpg",
         name: 'Hibiscus',
         price: "125",
+        stripeId: 'price_1Q9YOT08itiWYv2Zbv9V51OY',
     },
     {
         id: 2,
         image: "/images/perspective.jpg",
-        name: "It's all about perspective",
+        name: "It's all about Perspective",
         price: "125",
+        stripeId: 'price_1QAIAj08itiWYv2ZCleissrf',
     },
     {
         id: 3,
         image: "/images/melted-heart.jpg",
         name: 'Melted heart',
         price: "125",
+        stripeId: 'price_1Q9YOT08itiWYv2Zbv9V51OY',
     }
 ];
 
@@ -71,20 +72,31 @@ app.get('/api/sets', (req, res) => {
     res.json(sets);
 });
 
-app.post('/create-payment-intent', async (req, res) => {
-    const { amount } = req.body;
+const stripe = require('stripe')(process.env.STRIPE_PRIVATE_KEY);
 
+
+app.post('/create-checkout-session', async (req, res) => {
+    const { stripeId } = req.body;
+    console.log('request made with stripeId:', req.body);
     try {
-        const paymentIntent = await stripe.paymentIntents.create({
-            amount,
-            currency: 'usd',
+        const session = await stripe.checkout.sessions.create({
+            success_url: 'http://localhost:3000',
+            cancel_url: 'http://localhost:3000/purchases',
+            line_items: [
+                {
+                    price: stripeId,
+                    quantity: 1,
+                },
+            ],
+            mode: 'payment',
         });
+        console.log('session', session.id, session.url, session);
+        res.json({ url: session.url });
+        const sessionId = session.id;
+        console.log('sessionId', sessionId);
 
-        res.send({
-            clientSecret: paymentIntent.client_secret,
-        });
-    } catch (error) {
-        res.status(500).send({ error: error.message });
+    } catch (e) {
+        res.status(500).json({ error: e.message });
     }
 });
 

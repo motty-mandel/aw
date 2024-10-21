@@ -21,6 +21,7 @@ export default function Home() {
                 const response = await axios.get('https://aw-backend.onrender.com/api/paintings');
                 setPaintingsList(response.data);
                 setLoading(false);
+                console.log(response)
             } catch (err) {
                 console.error("Error fetching paintings", err);
                 setLoading(false);
@@ -32,6 +33,19 @@ export default function Home() {
 
     const handlePaintingClick = (painting) => {
         navigate('/showroom', { state: { painting } });
+    };
+
+    const handleBuyClick = async (stripeId) => {
+        console.log('stripeId:', stripeId);
+        try {
+            const response = await axios.post('http://localhost:5000/create-checkout-session', {
+                stripeId: stripeId,
+            });
+            const { url } = response.data;
+            window.location.href = url;
+        } catch (error) {
+            console.error('Error creating checkout session:', error);
+        }
     };
 
     if (loading) {
@@ -57,11 +71,11 @@ export default function Home() {
                             <div class="info">
                                 <p>Name: {painting.name} <br />
                                     Price: ${painting.price}</p>
+                                    <p onClick={() => handleBuyClick(painting.stripeId)}>Buy</p>
                             </div>
                         </div>
                     </div>
                 ))}
-
             </div>
         </div>
 
