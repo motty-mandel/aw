@@ -3,7 +3,12 @@ const express = require('express');
 const cors = require('cors');
 
 const app = express();
-app.use(cors());
+app.use(cors({
+    origin: ['http://localhost:3000', 'http://localhost:3000/sets'],
+    methods: ['GET', 'POST'],
+    allowedHeaders: ['Content-Type'],
+    credentials: true,
+}));
 app.use(express.json());
 app.use(express.static('public'));
 
@@ -27,7 +32,7 @@ const paintings = [
         image: "/images/melted-heart.jpg",
         name: 'Melted heart',
         price: "125",
-        stripeId: 'price_1Q9YOT08itiWYv2Zbv9V51OY',
+        stripeId: 'price_1QCS9O08itiWYv2Z1H46DYtZ',
     }
 ];
 
@@ -37,30 +42,35 @@ const sets = [
         image: "/images/abstract-flowers-1.jpg",
         name: "Single flowers",
         price: "125",
+        stripeId: 'price_1QCSGe08itiWYv2ZunEGzRWy',
     },
     {
         id: 2,
         image: "/images/abstract-flowers-2.jpg",
         name: "Double flowers",
         price: "125",
+        stripeId: 'price_1QCSJS08itiWYv2Zb7viUWpH',
     },
     {
         id: 3,
         image: "/images/abstract-flowers-3.jpg",
         name: "Triple flowers",
         price: "125",
+        stripeId: 'price_1QCSK808itiWYv2ZLdbtZEKX',
     },
     {
         id: 5,
         image: "/images/check.jpg",
         name: "Check",
         price: "125",
+        stripeId: 'price_1QCSL408itiWYv2Zn1LrUuYb',
     },
     {
         id: 6,
         image: "/images/ex.jpg",
         name: "Ex",
         price: "125",
+        stripeId: 'price_1QCSLs08itiWYv2ZB7CXoykR',
     },
 ];
 
@@ -74,14 +84,12 @@ app.get('/api/sets', (req, res) => {
 
 const stripe = require('stripe')(process.env.STRIPE_PRIVATE_KEY);
 
-
 app.post('/create-checkout-session', async (req, res) => {
     const { stripeId } = req.body;
-    console.log('request made with stripeId:', req.body);
     try {
         const session = await stripe.checkout.sessions.create({
             success_url: 'http://localhost:3000',
-            cancel_url: 'http://localhost:3000/purchases',
+            cancel_url: 'http://localhost:3000',
             line_items: [
                 {
                     price: stripeId,
@@ -90,10 +98,11 @@ app.post('/create-checkout-session', async (req, res) => {
             ],
             mode: 'payment',
         });
-        console.log('session', session.id, session.url, session);
+        console.log('session id:', session.id, 
+                    'session url:', session.url);
         res.json({ url: session.url });
         const sessionId = session.id;
-        console.log('sessionId', sessionId);
+        console.log('sessionId:', sessionId);
 
     } catch (e) {
         res.status(500).json({ error: e.message });

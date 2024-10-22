@@ -38,7 +38,7 @@ export default function Home() {
     const handleBuyClick = async (stripeId) => {
         console.log('stripeId:', stripeId);
         try {
-            const response = await axios.post('http://localhost:5000/create-checkout-session', {
+            const response = await axios.post('https://aw-backend.onrender.com/create-checkout-session', {
                 stripeId: stripeId,
             });
             const { url } = response.data;
@@ -71,7 +71,7 @@ export default function Home() {
                             <div class="info">
                                 <p>Name: {painting.name} <br />
                                     Price: ${painting.price}</p>
-                                    <p onClick={() => handleBuyClick(painting.stripeId)}>Buy</p>
+                                    <button onClick={() => handleBuyClick(painting.stripeId)}>Buy</button>
                             </div>
                         </div>
                     </div>

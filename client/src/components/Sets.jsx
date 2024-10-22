@@ -20,12 +20,13 @@ export default function Sets() {
                 const response = await axios.get('https://aw-backend.onrender.com/api/sets');
                 setPaintingsList(response.data);
                 setLoading(false);
+                console.log(response)
             } catch (err) {
-                console.error('Error fetching paaintings', err);
+                console.error('Error fetching paintings', err);
                 setLoading(false);
             }
         };
-
+ 
         fetchPaintings();
     }, []);
 
@@ -40,6 +41,19 @@ export default function Sets() {
             ...prevClasses,
             [id]: newClass
         }));
+    };
+
+    const handleBuyClick = async (stripeId) => {
+        console.log('stripeId:', stripeId);
+        try {
+            const response = await axios.post('https://aw-backend.onrender.com/create-checkout-session', {
+                stripeId: stripeId,
+            });
+            const { url } = response.data;
+            window.location.href = url;
+        } catch (error) {
+            console.error('Error creating checkout session:', error);
+        }
     };
 
     if (loading) {
@@ -68,6 +82,7 @@ export default function Sets() {
                             <div class="info">
                                 <p>Name: {painting.name} <br />
                                     Price: ${painting.price}</p>
+                                    <button onClick={() => handleBuyClick(painting.stripeId)}>Buy</button>
                             </div>
                         </div>
                     </div>
