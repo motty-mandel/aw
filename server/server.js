@@ -88,8 +88,8 @@ app.post('/create-checkout-session', async (req, res) => {
     const { stripeId } = req.body;
     try {
         const session = await stripe.checkout.sessions.create({
-            success_url: 'http://localhost:3000',
-            cancel_url: 'http://localhost:3000',
+            success_url: 'https://avigailsart.com',
+            cancel_url: 'https://avigailsart.com',
             line_items: [
                 {
                     price: stripeId,
