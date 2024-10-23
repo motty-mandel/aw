@@ -22,7 +22,7 @@ const Showroom = () => {
 
     if (!painting) {
         return (
-            <div class="error">
+            <div className="error">
                 <p>No painting data available. <span className="fa-solid fa-arrow-left" onClick={() => navigate(-1)}> Go back</span></p>
             </div>
         );
@@ -30,8 +30,8 @@ const Showroom = () => {
 
     return (
         <>
-            <div class="backButton">
-                <p class="fa-solid fa-arrow-left" onClick={() => navigate(-1)}> Back</p>
+            <div className="backButton">
+                <p className="fa-solid fa-arrow-left" onClick={() => navigate(-1)}> Back</p>
             </div>
             <div className="showroom">
                 <Carousel interval={null}>

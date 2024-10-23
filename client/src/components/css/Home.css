@@ -24,6 +24,18 @@
     line-height: 2rem;
 }
 
+.info button {
+    border-radius: 15%;
+    color: black;
+    background-color: white;
+    border-color: black;
+    font-family: "Grey Qo", cursive;
+    line-height: 50px;
+    font-size: xx-large;
+}
+
+
+
 .info {
     display: flex;
     justify-content: space-between;

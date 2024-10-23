@@ -21,7 +21,6 @@ export default function Home() {
                 const response = await axios.get('https://aw-backend.onrender.com/api/paintings');
                 setPaintingsList(response.data);
                 setLoading(false);
-                console.log(response)
             } catch (err) {
                 console.error("Error fetching paintings", err);
                 setLoading(false);
@@ -58,17 +57,17 @@ export default function Home() {
 
     return (
 
-        <div class="container">
-            <div class="row">
+        <div className="container">
+            <div className="row">
 
                 {paintingsList.map((painting) => (
-                    <div key={painting.id} class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
-                        <div class="display">
-                            <div class="canvas" onClick={() => handlePaintingClick(painting)}>
-                                <img class="painting"
+                    <div key={painting.id} className="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
+                        <div className="display">
+                            <div className="canvas" onClick={() => handlePaintingClick(painting)}>
+                                <img className="painting"
                                     src={`https://aw-backend.onrender.com${painting.image}`} alt={painting.name} />
                             </div>
-                            <div class="info">
+                            <div className="info">
                                 <p>Name: {painting.name} <br />
                                     Price: ${painting.price}</p>
                                     <button onClick={() => handleBuyClick(painting.stripeId)}>Buy</button>

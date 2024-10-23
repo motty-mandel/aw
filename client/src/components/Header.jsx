@@ -33,26 +33,26 @@ export default function Header() {
     }, [theme]);
 
     return (
-        <div class={`App-${theme}`}>
-            <div class="main-man d-flex align-items-center justify-content-between">
+        <div className={`App-${theme}`}>
+            <div className="main-man d-flex align-items-center justify-content-between">
 
-                <header class="header d-flex flex-row align-items-center justify-content-between p-3">
+                <header className="header d-flex flex-row align-items-center justify-content-between p-3">
 
-                    <div class="profile left-nav">
+                    <div className="profile left-nav">
                         <img src={avigailProfile} alt="profile-pic" height={'150px'} />
                     </div>
 
-                    <nav class="navbar d-flex flex-column align-items-center center-nav">
-                        <span class="navbar mb-0 pb-0 header-span">Avigails Art</span>
+                    <nav className="navbar d-flex flex-column align-items-center center-nav">
+                        <span className="navbar mb-0 pb-0 header-span">Avigails Art</span>
                         <img src={lightBorderPic} alt="flower-border" height={"70px"} />
                     </nav>
 
-                    <div class="right-nav d-flex align-items-center">
-                        <div class="btn-group dropleft">
-                            <button type="button" class="btn-md btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <div className="right-nav d-flex align-items-center">
+                        <div className="btn-group dropleft">
+                            <button type="button" className="btn-md btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 MENU
                             </button>
-                            <div class="dropdown-menu">
+                            <div className="dropdown-menu">
                                 <Link to={'/'}><p>Home</p></Link>
                                 <Link to={'/sets'}><p>Painting sets</p></Link>
                                 <Link to={'/connect'}><p>Connect</p></Link>

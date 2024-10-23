@@ -65,13 +65,13 @@ export default function Sets() {
     }
 
     return (
-        <div class="container">
-            <div class="row">
+        <div className="container">
+            <div className="row">
 
                 {paintingsList.map((painting) => (
-                    <div key={painting.id} class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
-                        <div class="displaySets">
-                            <div class="canvasSets" onClick={() => handlePaintingClick(painting)}>
+                    <div key={painting.id} className="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
+                        <div className="displaySets">
+                            <div className="canvasSets" onClick={() => handlePaintingClick(painting)}>
                             <img
                                     className={`paintingSets ${imageClasses[painting.id] || ''}`}
                                     src={`https://aw-backend.onrender.com/${painting.image}`}
@@ -79,7 +79,7 @@ export default function Sets() {
                                     onLoad={(event) => handleImageLoad(painting.id, event)}
                                 />
                             </div>
-                            <div class="info">
+                            <div className="info">
                                 <p>Name: {painting.name} <br />
                                     Price: ${painting.price}</p>
                                     <button onClick={() => handleBuyClick(painting.stripeId)}>Buy</button>
