@@ -1,6 +1,5 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import Carousel from 'react-bootstrap/Carousel';
 
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import "./css/Showroom.css";
@@ -11,6 +10,7 @@ const Showroom = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const { painting } = location.state || {};
+    const [imageClasses, setImageClasses] = useState({});
 
     const image = [
         `https://aw-backend.onrender.com/${painting.image}`,
@@ -19,6 +19,15 @@ const Showroom = () => {
     useEffect(() => {
         window.scrollTo(100, 100);
     }, []);
+
+    const handleImageLoad = (id, event) => {
+        const img = event.target;
+        const newClass = img.naturalWidth > img.naturalHeight ? "landscapeShow" : "portraitShow";
+        setImageClasses((prevClasses) => ({
+            ...prevClasses,
+            [id]: newClass
+        }));
+    };
 
     if (!painting) {
         return (
@@ -34,7 +43,11 @@ const Showroom = () => {
                 <p className="fa-solid fa-arrow-left" onClick={() => navigate(-1)}> Back</p>
             </div>
             <div className="showroom">
-                <img className="image" src={image} />
+                <img 
+                className={`image ${imageClasses[painting.id] || ''}`}
+                 src={image}
+                 onLoad={(event) => handleImageLoad(painting.id, event)}
+                  />
             </div>
         </>
     );

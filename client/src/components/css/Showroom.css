@@ -11,12 +11,6 @@
     border: solid 30px black;
 }
 
-.carousel {
-    margin: 0;
-    padding: 0;
-    max-width: 477.6px;
-}
-
 .backButton {
     margin: 20px 0 0 50px;
 }

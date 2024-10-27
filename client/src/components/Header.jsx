@@ -43,7 +43,7 @@ export default function Header() {
                     </div>
 
                     <nav className="navbar d-flex flex-column align-items-center center-nav">
-                        <span className="navbar mb-0 pb-0 header-span">Avigails Art</span>
+                        <Link to={'/'} className="no-underline"><span className="navbar mb-0 pb-0 header-span">Avigails Art</span></Link>
                         <img src={lightBorderPic} alt="flower-border" height={"70px"} />
                     </nav>
 

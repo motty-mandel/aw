@@ -1,9 +1,10 @@
 @media screen and (max-width: 768px){
-    .image {
-        height: 400px;
+    .image.landscapeShow {
+        width: 350px;
+        height: 290px;
     }
 
-    .carousel {
-        width: 315px;
+    .image.portraitShow {
+        height: 400px;
     }
 }
