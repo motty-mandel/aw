@@ -20,7 +20,6 @@ export default function Sets() {
                 const response = await axios.get('https://aw-backend.onrender.com/api/sets');
                 setPaintingsList(response.data);
                 setLoading(false);
-                console.log(response)
             } catch (err) {
                 console.error('Error fetching paintings', err);
                 setLoading(false);

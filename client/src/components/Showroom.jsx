@@ -12,12 +12,12 @@ const Showroom = () => {
     const location = useLocation();
     const { painting } = location.state || {};
 
-    const carouselImages = [
+    const image = [
         `https://aw-backend.onrender.com/${painting.image}`,
     ];
 
     useEffect(() => {
-        window.scrollTo(0, 0);
+        window.scrollTo(100, 100);
     }, []);
 
     if (!painting) {
@@ -34,13 +34,7 @@ const Showroom = () => {
                 <p className="fa-solid fa-arrow-left" onClick={() => navigate(-1)}> Back</p>
             </div>
             <div className="showroom">
-                <Carousel interval={null}>
-                    {carouselImages.map((image, index) => (
-                        <Carousel.Item key={index}>
-                            <img className="image" src={image} alt={`Slide ${index}`} />
-                        </Carousel.Item>
-                    ))}
-                </Carousel>
+                <img className="image" src={image} />
             </div>
         </>
     );
