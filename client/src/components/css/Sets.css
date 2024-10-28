@@ -1,10 +1,3 @@
-.main-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-}
-
 .canvasSets {
     width: 300px;
     margin: 50px 0 0;
@@ -17,14 +10,9 @@
     transition: ease-in-out 200ms;
 }
 
-.info p {
-    margin: 0;
-    font-weight: bold;
-    line-height: 2rem;
-}
-
-.info {
+.infoSets {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
     height: 100px;
@@ -33,6 +21,22 @@
     padding: 10px;
     border-radius: 10px;
     transition: ease-in-out 500ms;
+}
+
+.infoSets p {
+    margin: 0;
+    font-weight: bold;
+    line-height: 2rem;
+}
+
+.infoSets button {
+    border-radius: 15%;
+    color: black;
+    background-color: white;
+    border-color: black;
+    font-family: "Grey Qo", cursive;
+    line-height: 50px;
+    font-size: xx-large;
 }
 
 .paintingSets:hover {

@@ -78,10 +78,10 @@ export default function Sets() {
                                     onLoad={(event) => handleImageLoad(painting.id, event)}
                                 />
                             </div>
-                            <div className="info">
+                            <div className="infoSets">
                                 <p>Name: {painting.name} <br />
                                     Price: ${painting.price}</p>
-                                    <button onClick={() => handleBuyClick(painting.stripeId)}>Buy</button>
+                                    <button className='buttonSets' onClick={() => handleBuyClick(painting.stripeId)}>Buy</button>
                             </div>
                         </div>
                     </div>
@@ -89,6 +89,5 @@ export default function Sets() {
 
             </div>
         </div>
-
     );
 };

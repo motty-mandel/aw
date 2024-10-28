@@ -56,7 +56,6 @@ export default function Home() {
     }
 
     return (
-
         <div className="container">
             <div className="row">
 
@@ -75,8 +74,8 @@ export default function Home() {
                         </div>
                     </div>
                 ))}
+
             </div>
         </div>
-
     );
 };
