@@ -17,7 +17,7 @@ const Showroom = () => {
     ];
 
     useEffect(() => {
-        window.scrollTo(100, 100);
+        window.scrollTo(150, 150);
     }, []);
 
     const handleImageLoad = (id, event) => {
@@ -39,15 +39,20 @@ const Showroom = () => {
 
     return (
         <>
-            <div className="backButton">
-                <p className="fa-solid fa-arrow-left" onClick={() => navigate(-1)}> Back</p>
-            </div>
-            <div className="showroom">
-                <img 
-                className={`image ${imageClasses[painting.id] || ''}`}
-                 src={image}
-                 onLoad={(event) => handleImageLoad(painting.id, event)}
-                  />
+            <div className='showroomMain'>
+                <div className="backButton">
+                    <p className="fa-solid fa-arrow-left" onClick={() => navigate(-1)}> Back</p>
+                </div>
+                <div className="showroom">
+                    <img
+                        className={`image ${imageClasses[painting.id] || ''}`}
+                        src={image}
+                        onLoad={(event) => handleImageLoad(painting.id, event)}
+                    />
+                </div>
+                <div className='size'>
+                    <p className="fa-solid fa-ruler-combined">{painting.size}</p>
+                </div>
             </div>
         </>
     );
