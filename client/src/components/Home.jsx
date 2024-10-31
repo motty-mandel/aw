@@ -43,6 +43,15 @@ export default function Home() {
         navigate('/showroom', { state: { painting } });
     };
 
+    const handleImageLoad = (id, event) => {
+        const img = event.target;
+        const newClass = img.naturalWidth > img.naturalHeight ? "landscape" : "portrait";
+        setImageClasses((prevClasses) => ({
+            ...prevClasses,
+            [id]: newClass
+        }));
+    };
+
     const handleBuyClick = async (stripeId) => {
         console.log('stripeId:', stripeId);
         try {
@@ -73,7 +82,10 @@ export default function Home() {
                         <div className="display">
                             <div className="canvas" onClick={() => handlePaintingClick(painting)}>
                                 <img className="painting"
-                                    src={`https://aw-backend.onrender.com/${painting.image}`} alt={painting.name} />
+                                    src={`https://aw-backend.onrender.com/${painting.image}`}
+                                    alt={painting.name}
+                                    onLoad={(event) => handleImageLoad(painting.id, event)}
+                                    />
                             </div>
                             <div className="info">
                                 <p>Name: {painting.name} <br />
