@@ -12,6 +12,7 @@ export default function Home() {
 
     const [paintingsList, setPaintingsList] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [delay, setDelay] = useState(true);
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -19,7 +20,6 @@ export default function Home() {
             try {
                 setLoading(true);
                 const response = await axios.get('https://aw-backend.onrender.com/api/paintings');
-                // needs to be changed back
                 setPaintingsList(response.data);
                 console.log(response.data);
                 setLoading(false);
@@ -30,6 +30,13 @@ export default function Home() {
         };
 
         fetchPaintings();
+
+        const timer = setTimeout(() => {
+            setDelay(false);
+        }, 1000);
+
+        return () => clearTimeout(timer);
+
     }, []);
 
     const handlePaintingClick = (painting) => {

@@ -9,7 +9,8 @@ import "./css/setsMobile.css";
 export default function Sets() {
 
     const [paintingsList, setPaintingsList] = useState([]);
-    const [loading, setLoading] = useState(true); 
+    const [loading, setLoading] = useState(true);
+    const [delay, setDelay] = useState(true);
     const navigate = useNavigate();
     const [imageClasses, setImageClasses] = useState({});
 
@@ -27,6 +28,13 @@ export default function Sets() {
         };
  
         fetchPaintings();
+        
+        const timer = setTimeout(() => {
+            setDelay(false);
+        }, 1000);
+
+        return () => clearTimeout(timer);
+
     }, []);
 
     const handlePaintingClick = (painting) => {
