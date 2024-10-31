@@ -118,6 +118,7 @@ const sets = [
         name: "Single flowers",
         price: "125",
         stripeId: 'price_1QCSGe08itiWYv2ZunEGzRWy',
+        size: '30x24',
     },
     {
         id: 2,
@@ -125,6 +126,7 @@ const sets = [
         name: "Double flowers",
         price: "125",
         stripeId: 'price_1QCSJS08itiWYv2Zb7viUWpH',
+        size: '30x24',
     },
     {
         id: 3,
@@ -132,6 +134,7 @@ const sets = [
         name: "Triple flowers",
         price: "125",
         stripeId: 'price_1QCSK808itiWYv2ZLdbtZEKX',
+        size: '30x24',
     },
     {
         id: 5,
@@ -139,6 +142,7 @@ const sets = [
         name: "Check",
         price: "125",
         stripeId: 'price_1QCSL408itiWYv2Zn1LrUuYb',
+        size: '20x24',
     },
     {
         id: 6,
@@ -146,6 +150,7 @@ const sets = [
         name: "Ex",
         price: "125",
         stripeId: 'price_1QCSLs08itiWYv2ZB7CXoykR',
+        size: '20x24',
     },
 ];
 
