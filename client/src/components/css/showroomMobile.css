@@ -1,7 +1,60 @@
+@media screen and (max-width: 1400px) {
+    .image.landscapeShow {
+        width: 700px;
+        height: auto;
+        margin-top: 40px;
+    }
+
+    .image.portraitShow {
+        height: 700px;
+    }
+
+    .showroom {
+        padding: 30px 0;
+    }
+
+    .backButton {
+        margin: 20px 0;
+    }
+}
+
+@media screen and (max-width: 820px) {
+    .image.landscapeShow {
+        width: 600px;
+        height: auto;
+    }
+
+    .image.portraitShow {
+        height: 700px;
+    }
+}
+
 @media screen and (max-width: 768px){
     .image.landscapeShow {
+        width: 400px;
+        height: auto;
+    }
+
+    .image.portraitShow {
+        height: 450px;
+    }
+
+    .showroomMain {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .backButton {
+        margin: 20px 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .image.landscapeShow {
         width: 350px;
-        height: 290px;
+        height: auto;
     }
 
     .image.portraitShow {

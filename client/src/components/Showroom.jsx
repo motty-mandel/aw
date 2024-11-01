@@ -17,7 +17,7 @@ const Showroom = () => {
     ];
 
     useEffect(() => {
-        window.scrollTo(200, 200);
+        window.scrollTo(150, 200);
     }, []);
 
     const handleImageLoad = (id, event) => {

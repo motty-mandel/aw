@@ -1,20 +1,18 @@
 .showroomMain {
     display: flex;
-    justify-content: center;
-    flex-direction: column;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
 }
 
 .showroom {
     margin: 0;
-    padding: 30px 50px 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 30px 50px;
 }
 
 .image {
-    height: 700px;
-    border: solid 30px black;
+    height: 850px;
+    border: solid 10px black;
 }
 
 .backButton {
@@ -23,8 +21,4 @@
 
 .backButton p {
     cursor: pointer;
-}
-
-.size {
-    margin-left: 47%;
 }

@@ -14,12 +14,13 @@ export default function Home() {
     const [loading, setLoading] = useState(true);
     const [delay, setDelay] = useState(true);
     const navigate = useNavigate();
+    const [imageClasses, setImageClasses] = useState({});
 
     useEffect(() => {
         const fetchPaintings = async () => {
             try {
                 setLoading(true);
-                const response = await axios.get('https://aw-backend.onrender.com/api/paintings');
+                const response = await axios.get('http://localhost:5000/api/paintings');
                 setPaintingsList(response.data);
                 console.log(response.data);
                 setLoading(false);
@@ -81,8 +82,9 @@ export default function Home() {
                     <div key={painting.id} className="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
                         <div className="display">
                             <div className="canvas" onClick={() => handlePaintingClick(painting)}>
-                                <img className="painting"
-                                    src={`https://aw-backend.onrender.com/${painting.image}`}
+                                <img 
+                                    className={`painting ${imageClasses[painting.id] || ''}`}
+                                    src={`http://localhost:5000/${painting.image}`}
                                     alt={painting.name}
                                     onLoad={(event) => handleImageLoad(painting.id, event)}
                                     />
