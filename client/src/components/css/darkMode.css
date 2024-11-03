@@ -3,7 +3,13 @@
     --darkMode-darks: rgb(34, 34, 34);
 }
 
+/* --------------------------------------- */
 /* Header dark mode */
+
+.Dark .center-nav .header-span {
+    color: var(--darkMode-lights);
+}
+
 .Dark .header {
     color: var(--darkMode-lights);
     background-color: rgb(34, 34, 34);
@@ -16,6 +22,7 @@
 .Dark .btn-md.btn-secondary:active {
     background-color: var(--darkMode-lights);
 }
+
 /* --------------------------------------- */
 /* Home dark mode */
 
@@ -73,4 +80,15 @@
     color: var(--darkMode-lights);
     background-color: var(--darkMode-darks);
     transition: ease-in-out 500ms;
+}
+
+/* -------------------------------------------- */
+/* Showroom dark mode */
+
+.Dark .backButton {
+    color: var(--darkMode-lights);
+}
+
+.Dark .measure {
+    color: var(--darkMode-lights);
 }

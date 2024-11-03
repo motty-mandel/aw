@@ -22,7 +22,6 @@ export default function Home() {
                 setLoading(true);
                 const response = await axios.get('https://aw-backend.onrender.com/api/paintings');
                 setPaintingsList(response.data);
-                console.log(response.data);
                 setLoading(false);
             } catch (err) {
                 console.error("Error fetching paintings", err);

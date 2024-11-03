@@ -4,6 +4,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import "./css/Showroom.css";
 import "./css/showroomMobile.css";
+import "./css/darkMode.css";
 
 const Showroom = () => {
 
@@ -51,7 +52,7 @@ const Showroom = () => {
                     />
                 </div>
                 <div className='size'>
-                    <p className="fa-solid fa-ruler-combined">{painting.size}</p>
+                    <p className="fa-solid fa-ruler-combined measure">{painting.size}</p>
                 </div>
             </div>
         </>
