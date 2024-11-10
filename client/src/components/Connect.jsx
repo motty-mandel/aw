@@ -21,6 +21,7 @@ export default function Connect() {
             .then(() => {
                 console.log('Success');
                 alert('Message sent successfully');
+                clearInputs();
             }, (error) => {
                 console.log('Failed...', error);
                 alert('Please try again');
@@ -61,7 +62,7 @@ export default function Connect() {
                     <textarea name="message" className="form-control message" id="exampleFormControlTextarea1" rows="3"></textarea>
                 </div>
 
-                <button type="submit" className="btn btn-primary" onClick={clearInputs}>Send</button>
+                <button type="submit" className="btn btn-primary">Send</button>
 
             </form>
         </div>
