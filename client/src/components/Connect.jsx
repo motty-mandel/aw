@@ -29,7 +29,6 @@ export default function Connect() {
     };
 
     const clearInputs = (e) => {
-        e.preventDefault();
 
         const name = document.getElementsByClassName('name')[0];
         const email = document.getElementsByClassName('email')[0];
