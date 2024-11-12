@@ -51,7 +51,6 @@ export default function Sets() {
     };
 
     const handleBuyClick = async (stripeId) => {
-        console.log('stripeId:', stripeId);
         try {
             const response = await axios.post('https://aw-backend.onrender.com/create-checkout-session', {
                 stripeId: stripeId,
