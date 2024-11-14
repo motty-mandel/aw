@@ -60,7 +60,7 @@ export default function Home() {
             const { url } = response.data;
             window.location.href = url;
         } catch (error) {
-            console.error('Error creating checkout session:', error);
+            console.error('Error creating checkout session:', error.response);
         }
     };
 
