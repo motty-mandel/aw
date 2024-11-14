@@ -181,7 +181,7 @@ app.get('/api/sets', (req, res) => {
     res.json(sets);
 });
 
-const stripe = require('stripe')(process.env.STRIPE_PRIVATE_KEY);
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
 app.post('/create-checkout-session', async (req, res) => {
     const { stripeId } = req.body;
