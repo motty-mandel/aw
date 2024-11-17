@@ -7,6 +7,7 @@ import Home from './components/Home';
 import Connect from './components/Connect';
 import Sets from './components/Sets';
 import Showroom from './components/Showroom';
+import Success from "./components/Success";
 
 const router = createBrowserRouter([
     {
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
             {
                 path: '/showroom',
                 element: <Showroom />
+            },
+            {
+                path: "/success",
+                element: <Success />
             }
         ]
     }

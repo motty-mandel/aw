@@ -54,7 +54,7 @@ export default function Home() {
 
     const handleBuyClick = async (stripeId) => {
         try {
-            const response = await axios.post('https://aw-backend.onrender.com/create-checkout-session', {
+            const response = await axios.post('http://localhost:5000/create-checkout-session', {
                 stripeId: stripeId,
             });
             const { url } = response.data;

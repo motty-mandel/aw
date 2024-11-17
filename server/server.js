@@ -1,6 +1,8 @@
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
+const bodyParser = require('body-parser');
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
 const app = express();
 app.use(cors({
@@ -11,6 +13,8 @@ app.use(cors({
 }));
 app.use(express.json());
 app.use(express.static('public'));
+
+app.use(bodyParser.raw({ type: 'application.json' }));
 
 const paintings = [
     {
@@ -181,13 +185,12 @@ app.get('/api/sets', (req, res) => {
     res.json(sets);
 });
 
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
 app.post('/create-checkout-session', async (req, res) => {
     const { stripeId } = req.body;
     try {
         const session = await stripe.checkout.sessions.create({
-            success_url: 'https://avigailsart.com',
+            success_url: 'http://localhost:3000/success',
             cancel_url: 'https://avigailsart.com',
             line_items: [
                 {
@@ -207,6 +210,28 @@ app.post('/create-checkout-session', async (req, res) => {
         res.status(500).json({ error: e.message });
     }
 });
+
+app.post('/webhook', (req, res) => {
+    const sig = req.headers['stripe-signature'];
+
+    let event;
+
+    try {
+        event = stripe.webhooks.constructEvent(req.body, sig, process.env.STRIPE_SECRET_KEY);
+    } catch (err) {
+        console.log(`⚠️  Webhook signature verification failed.`, err.message);
+        return res.sendStatus(400);
+    }
+
+    if (event.type === 'checkout.session.completed') {
+        const session = event.data.object;
+
+        paintings = paintings.filter(painting => painting.stripeId !== session.line_items[0].price);
+        console.log('Updated paintings');
+    }
+
+    res.status(200);
+})
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
