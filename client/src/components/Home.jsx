@@ -21,7 +21,7 @@ export default function Home() {
         const fetchPaintings = async () => {
             try {
                 setLoading(true);
-                const response = await axios.get('http://localhost:5000/api/paintings')
+                const response = await axios.get('https://aw-backend.onrender.com/api/paintings')
                 setPaintingsList(response.data);
                 setLoading(false);
             } catch (err) {
@@ -83,7 +83,7 @@ export default function Home() {
                             <div className="canvas" onClick={() => handlePaintingClick(painting)}>
                                 <img
                                     className={`painting ${imageClasses[painting.id] || ''}`}
-                                    src={`http://localhost:5000/${painting.image}`}
+                                    src={`https://aw-backend.onrender.com/${painting.image}`}
                                     alt={painting.name}
                                     onLoad={(event) => handleImageLoad(painting.id, event)}
                                 />

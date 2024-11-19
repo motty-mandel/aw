@@ -14,7 +14,7 @@ const Showroom = () => {
     const [imageClasses, setImageClasses] = useState({});
 
     const image = [
-        `http://localhost:5000/${painting.image}`,
+        `https://aw-backend.onrender.com/${painting.image}`,
     ];
 
     useEffect(() => {
