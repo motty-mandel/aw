@@ -41,7 +41,8 @@ export default function Connect() {
 
 
     return (
-        <div className="connect-main d-flex align-items-center justify-content-center">
+        <div className="connect-main d-flex flex-column align-items-center justify-content-center">
+
             <form className="form" id="contact-form" ref={form} onSubmit={sendEmail}>
 
                 <input type="hidden" name="contact_number" value="697483" />

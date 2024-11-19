@@ -11,6 +11,7 @@ import "./css/darkMode.css";
 export default function Home() {
 
     const [paintingsList, setPaintingsList] = useState([]);
+    const [widePaints, setWidePaints] = useState([]);
     const [loading, setLoading] = useState(true);
     const [delay, setDelay] = useState(true);
     const navigate = useNavigate();
@@ -20,7 +21,7 @@ export default function Home() {
         const fetchPaintings = async () => {
             try {
                 setLoading(true);
-                const response = await axios.get('https://aw-backend.onrender.com/api/paintings');
+                const response = await axios.get('http://localhost:5000/api/paintings')
                 setPaintingsList(response.data);
                 setLoading(false);
             } catch (err) {
@@ -80,17 +81,17 @@ export default function Home() {
                     <div key={painting.id} className="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
                         <div className="display">
                             <div className="canvas" onClick={() => handlePaintingClick(painting)}>
-                                <img 
+                                <img
                                     className={`painting ${imageClasses[painting.id] || ''}`}
-                                    src={`https://aw-backend.onrender.com/${painting.image}`}
+                                    src={`http://localhost:5000/${painting.image}`}
                                     alt={painting.name}
                                     onLoad={(event) => handleImageLoad(painting.id, event)}
-                                    />
+                                />
                             </div>
                             <div className="info">
                                 <p>Name: {painting.name} <br />
                                     Price: ${painting.price}</p>
-                                    <button onClick={() => handleBuyClick(painting.stripeId)}>Buy</button>
+                                <button onClick={() => handleBuyClick(painting.stripeId)}>Buy</button>
                             </div>
                         </div>
                     </div>

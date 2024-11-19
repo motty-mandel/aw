@@ -9,12 +9,22 @@
         height: 700px;
     }
 
+    .image.wideShow {
+        height: 250px;
+    }
+
     .showroom {
         padding: 30px 0;
     }
 
     .backButton {
         margin: 20px 0;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .image.wideShow {
+        height: 200px;
     }
 }
 
@@ -27,6 +37,10 @@
     .image.portraitShow {
         height: 700px;
     }
+
+    .image.wideShow {
+        height: 150px;
+    }
 }
 
 @media screen and (max-width: 768px){
@@ -37,6 +51,10 @@
 
     .image.portraitShow {
         height: 450px;
+    }
+
+    .image.wideShow {
+        height: 150px;
     }
 
     .showroomMain {
@@ -51,6 +69,12 @@
     }
 }
 
+@media screen and (max-width: 550px) {
+    .image.wideShow {
+        height: 100px;
+    }
+}
+
 @media screen and (max-width: 400px) {
     .image.landscapeShow {
         width: 350px;
@@ -59,5 +83,9 @@
 
     .image.portraitShow {
         height: 400px;
+    }
+
+    .image.wideShow {
+        height: 100px;
     }
 }

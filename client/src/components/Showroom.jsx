@@ -14,7 +14,7 @@ const Showroom = () => {
     const [imageClasses, setImageClasses] = useState({});
 
     const image = [
-        `https://aw-backend.onrender.com/${painting.image}`,
+        `http://localhost:5000/${painting.image}`,
     ];
 
     useEffect(() => {
@@ -23,7 +23,14 @@ const Showroom = () => {
 
     const handleImageLoad = (id, event) => {
         const img = event.target;
-        const newClass = img.naturalWidth > img.naturalHeight ? "landscapeShow" : "portraitShow";
+        let newClass;
+        if (img.naturalWidth >= 2 * img.naturalHeight) {
+            newClass = 'wideShow';
+        } else if (img.naturalWidth > img.naturalHeight) {
+            newClass = 'landscapeShow';
+        } else {
+            newClass = 'portraitShow'
+        }
         setImageClasses((prevClasses) => ({
             ...prevClasses,
             [id]: newClass

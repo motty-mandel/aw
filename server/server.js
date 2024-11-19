@@ -120,19 +120,32 @@ const paintings = [
         price: "150",
         stripeId: 'price_1QKQ9F08itiWYv2ZXu2MgksY',
         size: " 36x24",
+    },
+    {
+        id: 14,
+        image: "images/celebration.jpg",
+        name: 'Celebration',
+        price: "175",
+        stripeId: 'price_1QN07g08itiWYv2ZBugw6GVh',
+        size: " 48x12",
+    },
+    {
+        id: 15,
+        image: "images/israel.jpg",
+        name: 'Long Live Israel',
+        price: "175",
+        stripeId: 'price_1QN08g08itiWYv2ZoX0nzmse',
+        size: " 48x12",
+    }    ,
+    {
+        id: 16,
+        image: "images/bliss.jpg",
+        name: 'Bliss',
+        price: "175",
+        stripeId: 'price_1QN09F08itiWYv2ZHmRaF6DL',
+        size: " 48x12",
     }
 ];
-
-const widePaints = [
-    {
-        id: 1,
-        image: "/images/celebration.jpg",
-        name: 'Celebration',
-        price: "125",
-        stripeId: 'price_1Q9YOT08itiWYv2Zbv9V51OY',
-        size: " 24x30",
-    }
-]
 
 const sets = [
     {
@@ -141,7 +154,7 @@ const sets = [
         name: "Single flowers",
         price: "175",
         stripeId: 'price_1QKQ3r08itiWYv2Z4upsUMdw',
-        size: '30x24',
+        size: ' 30x24',
     },
     {
         id: 2,
@@ -149,7 +162,7 @@ const sets = [
         name: "Double flowers",
         price: "175",
         stripeId: 'price_1QKQ3t08itiWYv2ZYwF65lZt',
-        size: '30x24',
+        size: ' 30x24',
     },
     {
         id: 3,
@@ -157,7 +170,7 @@ const sets = [
         name: "Triple flowers",
         price: "175",
         stripeId: 'price_1QKQ3v08itiWYv2ZMSaI7V9k',
-        size: '30x24',
+        size: ' 30x24',
     },
     {
         id: 5,
@@ -165,7 +178,7 @@ const sets = [
         name: "Check",
         price: "125",
         stripeId: 'price_1QKQ3w08itiWYv2Z6UqwzrZy',
-        size: '20x24',
+        size: ' 20x24',
     },
     {
         id: 6,
@@ -173,7 +186,7 @@ const sets = [
         name: "Ex",
         price: "125",
         stripeId: 'price_1QKQ3y08itiWYv2Zf3RZP59m',
-        size: '20x24',
+        size: ' 20x24',
     },
 ];
 
@@ -184,7 +197,6 @@ app.get('/api/paintings', (req, res) => {
 app.get('/api/sets', (req, res) => {
     res.json(sets);
 });
-
 
 app.post('/create-checkout-session', async (req, res) => {
     const { stripeId } = req.body;
