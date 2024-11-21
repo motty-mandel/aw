@@ -16,11 +16,8 @@
     transition: ease-in-out 500ms;
 }
 
-.Dark .btn-md.btn-secondary,
-.Dark .btn-md.btn-secondary:hover,
-.Dark .btn-md.btn-secondary:focus,
-.Dark .btn-md.btn-secondary:active {
-    background-color: var(--darkMode-lights);
+.Dark .right-nav .links p {
+    color: var(--darkMode-lights);
 }
 
 /* --------------------------------------- */

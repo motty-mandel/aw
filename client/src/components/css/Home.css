@@ -23,6 +23,7 @@
     padding: 10px;
     border-radius: 10px;
     transition: ease-in-out 500ms;
+    color: rgba(0, 52, 105, 0.75);
 }
 
 .info p {

@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'customFont';
+    src: url(../fonts/highjumpFont.woff2);
+    font-weight: normal;
+    font-style: normal; 
+}
+
 :root {
     --main-background: #e5fdef;
 }
@@ -7,11 +14,8 @@
     width: 100vw;
     background-color: var(--main-background);
     margin-top: -40px;
-    font-size: 20px;
-    font-weight: bold;
     transition: ease-in-out 500ms;
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 50px;
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37)
 }
 
@@ -19,7 +23,7 @@
 .profile img {
     border-radius: 20px;
     border: solid 5px black;
-    margin: 40px 0 0 20px;
+    margin: 30px 55px 0 55px;
 }
 
 /* "Avigails Paintings" */
@@ -41,31 +45,23 @@
     padding-top: 40px;
 }
 
-.btn-md {
-    font-family: "Grey Qo", cursive;
-    border-radius: 15%;
-    background-color: white;
-    color: gray;
-    margin-left: 60.64px;
+.right-nav .links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.btn-md.btn-secondary:focus,
-.btn-md.btn-secondary:hover,
-.btn-md.btn-secondary:active {
-    box-shadow: none!important;
-    outline: none!important;
-    background-color: white!important;
-    color: gray!important;
-}
-
-.dropdown-menu p {
-    font-size: x-large;
-    font-family: "Grey Qo", cursive;
-    cursor: pointer;
-    margin: 5px;
-    color: black;
-}
-
-.dropdown-menu a {
+.right-nav .links a {
     text-decoration: none;
+}
+
+.right-nav .links p {
+    padding: 0 20px 5px 20px;
+    color: black;
+    cursor: pointer;
+    font-family: 'customFont';
+    font-size: small;
+    border-bottom: thick double;
+    border-right: thick double;
+    border-left: thick double;
 }

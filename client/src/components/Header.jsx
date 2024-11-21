@@ -48,16 +48,11 @@ export default function Header() {
                     </nav>
 
                     <div className="right-nav d-flex align-items-center">
-                        <div className="btn-group dropleft">
-                            <button type="button" className="btn-md btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                MENU
-                            </button>
-                            <div className="dropdown-menu">
-                                <Link to={'/'}><p>Home</p></Link>
-                                <Link to={'/sets'}><p>Painting sets</p></Link>
-                                <Link to={'/connect'}><p>Connect</p></Link>
-                                <p onClick={toggleTheme}>{btnName} mode</p>
-                            </div>
+                        <div className="links">
+                            <Link to={'/'}><p>Home</p></Link>
+                            <Link to={'/sets'}><p>Painting sets</p></Link>
+                            <Link to={'/connect'}><p>Connect</p></Link>
+                            <p onClick={toggleTheme}>{btnName} mode</p>
                         </div>
                     </div>
 

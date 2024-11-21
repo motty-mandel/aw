@@ -6,6 +6,16 @@
     .center-nav img {
         height: 60px;
     }
+
+    .right-nav {
+        padding: 0;
+    }
+
+    .right-nav .links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -25,10 +35,6 @@
         flex-direction: column!important;
         justify-content: center!important;
         align-items: center!important;
-    }
-
-    .btn-md {
-        margin: 0;
     }
 }
 
