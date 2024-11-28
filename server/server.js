@@ -190,12 +190,29 @@ const sets = [
     },
 ];
 
+const sold = [
+    {
+        id: 1,
+        image: "/images/soldBaisPainting.jpg",
+        name: 'Bais Hamikdash',
+    },
+    {
+        id: 2,
+        image: "/images/soldSplitPainting.jpg",
+        name: 'Splitting of the Sea',
+    },
+]
+
 app.get('/api/paintings', (req, res) => {
     res.json(paintings);
 });
 
 app.get('/api/sets', (req, res) => {
     res.json(sets);
+});
+
+app.get('/api/sold', (req, res) => {
+    res.json(sold);
 });
 
 app.post('/create-checkout-session', async (req, res) => {
