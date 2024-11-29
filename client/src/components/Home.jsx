@@ -107,7 +107,7 @@ export default function Home() {
                         <div className="display">
                             <div className="canvas" onClick={() => handlePaintingClick(painting)}>
                                 <img
-                                    className={`painting ${imageClasses[painting.id] || ''}`}
+                                    className={`painting ${imageClasses[`${painting.id}`] || ''}`}
                                     src={`https://aw-backend.onrender.com/${painting.image}`}
                                     alt={painting.name}
                                     onLoad={(event) => handleImageLoad(painting.id, event)}

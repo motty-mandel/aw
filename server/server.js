@@ -201,6 +201,11 @@ const sold = [
         image: "/images/soldSplitPainting.jpg",
         name: 'Splitting of the Sea',
     },
+    {
+        id: 3,
+        image: "/images/westernWallSold.jpg",
+        name: 'Western Wall',
+    },
 ]
 
 app.get('/api/paintings', (req, res) => {
