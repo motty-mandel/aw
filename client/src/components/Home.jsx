@@ -17,7 +17,6 @@ export default function Home() {
     const [loading, setLoading] = useState(true);
     const [delay, setDelay] = useState(true);
     const navigate = useNavigate();
-    const [imageClasses, setImageClasses] = useState({});
 
     useEffect(() => {
         const fetchPaintings = async () => {
@@ -50,15 +49,6 @@ export default function Home() {
         navigate('/showroom', { state: { painting } });
     };
 
-    const handleImageLoad = (id, event) => {
-        const img = event.target;
-        const newClass = img.naturalWidth > img.naturalHeight ? "landscape" : "portrait";
-        setImageClasses((prevClasses) => ({
-            ...prevClasses,
-            [id]: newClass
-        }));
-    };
-
     const handleBuyClick = async (stripeId) => {
         try {
             const response = await axios.post('https://aw-backend.onrender.com/create-checkout-session', {
@@ -88,7 +78,7 @@ export default function Home() {
                         <div className="display">
                             <div className="canvas" onClick={() => handlePaintingClick(painting)}>
                                 <img
-                                    className={`painting ${imageClasses[painting.id] || ''}`}
+                                    className={`painting ${painting.orientation}`}
                                     src={`https://aw-backend.onrender.com/${painting.image}`}
                                     alt={painting.name}
                                     onLoad={(event) => handleImageLoad(painting.id, event)}

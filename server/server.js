@@ -24,6 +24,7 @@ const paintings = [
         price: "175",
         stripeId: 'price_1Q9Y3p08itiWYv2ZOVkm99ZE',
         size: " 24x30",
+        orientation: 'portrait',
     },
     {
         id: 2,
@@ -32,6 +33,7 @@ const paintings = [
         price: "150",
         stripeId: 'price_1QKQ3k08itiWYv2ZgaYUrYt7',
         size: " 20x24",
+        orientation: 'portrait',
     },
     {
         id: 3,
@@ -40,6 +42,7 @@ const paintings = [
         price: "150",
         stripeId: 'price_1QKQ3p08itiWYv2ZT1qDmuwE',
         size: " 20x24",
+        orientation: 'portrait',
     },
     {
         id: 4,
@@ -48,6 +51,7 @@ const paintings = [
         price: "175",
         stripeId: 'price_1QKQ4008itiWYv2ZSaGaLlYK',
         size: " 24x30",
+        orientation: 'portrait',
     },
     {
         id: 5,
@@ -56,6 +60,7 @@ const paintings = [
         price: "175",
         stripeId: 'price_1QKQ4108itiWYv2ZiXwX75p9',
         size: " 24x30",
+        orientation: 'portrait',
     },
     {
         id: 6,
@@ -64,6 +69,7 @@ const paintings = [
         price: "100",
         stripeId: 'price_1QKQ4208itiWYv2ZvTmI2tPz',
         size: " 16x20",
+        orientation: 'portrait',
     },
     {
         id: 7,
@@ -72,6 +78,7 @@ const paintings = [
         price: "100",
         stripeId: 'price_1QKQ4G08itiWYv2ZzkFhcGo2',
         size: " 16x20",
+        orientation: 'portrait',
     },
     {
         id: 8,
@@ -80,6 +87,7 @@ const paintings = [
         price: "175",
         stripeId: 'price_1QKQ4I08itiWYv2Zcqykcjze',
         size: " 24x30",
+        orientation: 'portrait',
     },
     {
         id: 9,
@@ -88,6 +96,7 @@ const paintings = [
         price: "100",
         stripeId: 'price_1QKQ4J08itiWYv2ZiYFVAWkg',
         size: " 16x20",
+        orientation: 'portrait',
     },
     {
         id: 10,
@@ -96,6 +105,7 @@ const paintings = [
         price: "100",
         stripeId: 'price_1QKQ4L08itiWYv2Z35zD85em',
         size: " 16x20",
+        orientation: 'portrait',
     },
     {
         id: 11,
@@ -104,6 +114,7 @@ const paintings = [
         price: "175",
         stripeId: 'price_1QKQ4N08itiWYv2ZrsT1HMdq',
         size: " 24x30",
+        orientation: 'portrait',
     },
     {
         id: 12,
@@ -112,6 +123,7 @@ const paintings = [
         price: "150",
         stripeId: 'price_1QKQ4P08itiWYv2ZgtkkFuKH',
         size: " 20x24",
+        orientation: 'portrait',
     },
     {
         id: 13,
@@ -120,6 +132,7 @@ const paintings = [
         price: "150",
         stripeId: 'price_1QKQ9F08itiWYv2ZXu2MgksY',
         size: " 36x24",
+        orientation: 'landscape',
     },
     {
         id: 14,
@@ -128,6 +141,7 @@ const paintings = [
         price: "175",
         stripeId: 'price_1QN07g08itiWYv2ZBugw6GVh',
         size: " 48x12",
+        orientation: 'landscape',
     },
     {
         id: 15,
@@ -136,7 +150,8 @@ const paintings = [
         price: "175",
         stripeId: 'price_1QN08g08itiWYv2ZoX0nzmse',
         size: " 48x12",
-    }    ,
+        orientation: 'landscape',
+    },
     {
         id: 16,
         image: "images/bliss.jpg",
@@ -144,6 +159,7 @@ const paintings = [
         price: "175",
         stripeId: 'price_1QN09F08itiWYv2ZHmRaF6DL',
         size: " 48x12",
+        orientation: 'landscape',
     }
 ];
 
