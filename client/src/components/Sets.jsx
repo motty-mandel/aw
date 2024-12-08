@@ -6,6 +6,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import "./css/Sets.css";
 import "./css/setsMobile.css";
 
+// http://localhost:5000
+// https://aw-backend.onrender.com
+
 export default function Sets() {
 
     const [paintingsList, setPaintingsList] = useState([]);
@@ -18,7 +21,7 @@ export default function Sets() {
         const fetchPaintings = async () => {
             try {
                 setLoading(true);
-                const response = await axios.get('https://aw-backend.onrender.com/api/sets');
+                const response = await axios.get('http://localhost:5000/api/sets');
                 setPaintingsList(response.data);
                 setLoading(false);
             } catch (err) {
@@ -79,8 +82,8 @@ export default function Sets() {
                         <div className="displaySets">
                             <div className="canvasSets" onClick={() => handlePaintingClick(painting)}>
                             <img
-                                    className={`paintingSets ${imageClasses[painting.id] || ''}`}
-                                    src={`https://aw-backend.onrender.com/${painting.image}`}
+                                    className={`paintingSets ${painting.orientation}`}
+                                    src={`http://localhost:5000/${painting.image}`}
                                     alt={painting.name}
                                     onLoad={(event) => handleImageLoad(painting.id, event)}
                                 />

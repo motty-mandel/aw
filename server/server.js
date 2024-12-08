@@ -155,6 +155,7 @@ const sets = [
         price: "175",
         stripeId: 'price_1QKQ3r08itiWYv2Z4upsUMdw',
         size: ' 30x24',
+        orientation: 'landscape',
     },
     {
         id: 2,
@@ -163,6 +164,7 @@ const sets = [
         price: "175",
         stripeId: 'price_1QKQ3t08itiWYv2ZYwF65lZt',
         size: ' 30x24',
+        orientation: 'landscape',
     },
     {
         id: 3,
@@ -171,6 +173,7 @@ const sets = [
         price: "175",
         stripeId: 'price_1QKQ3v08itiWYv2ZMSaI7V9k',
         size: ' 30x24',
+        orientation: 'landscape',
     },
     {
         id: 5,
@@ -179,6 +182,7 @@ const sets = [
         price: "125",
         stripeId: 'price_1QKQ3w08itiWYv2Z6UqwzrZy',
         size: ' 20x24',
+        orientation: 'portrait',
     },
     {
         id: 6,
@@ -187,6 +191,7 @@ const sets = [
         price: "125",
         stripeId: 'price_1QKQ3y08itiWYv2Zf3RZP59m',
         size: ' 20x24',
+        orientation: 'portrait',
     },
 ];
 
@@ -194,17 +199,17 @@ const sold = [
     {
         id: 1,
         image: "/images/soldBaisPainting.jpg",
-        name: 'Bais Hamikdash',
+        orientation: 'portrait',
     },
     {
         id: 2,
         image: "/images/soldSplitPainting.jpg",
-        name: 'Splitting of the Sea',
+        orientation: 'landscape',
     },
     {
         id: 3,
         image: "/images/westernWallSold.jpg",
-        name: 'Western Wall',
+        orientation: 'portrait',
     },
 ]
 
