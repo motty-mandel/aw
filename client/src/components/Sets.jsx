@@ -15,7 +15,6 @@ export default function Sets() {
     const [loading, setLoading] = useState(true);
     const [delay, setDelay] = useState(true);
     const navigate = useNavigate();
-    const [imageClasses, setImageClasses] = useState({});
 
     useEffect(() => {
         const fetchPaintings = async () => {
@@ -42,15 +41,6 @@ export default function Sets() {
 
     const handlePaintingClick = (painting) => {
         navigate('/showroom', { state: { painting} });
-    };
-
-    const handleImageLoad = (id, event) => {
-        const img = event.target;
-        const newClass = img.naturalWidth > img.naturalHeight ? "landscape" : "portrait";
-        setImageClasses((prevClasses) => ({
-            ...prevClasses,
-            [id]: newClass
-        }));
     };
 
     const handleBuyClick = async (stripeId) => {
