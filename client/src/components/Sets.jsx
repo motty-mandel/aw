@@ -75,7 +75,6 @@ export default function Sets() {
                                     className={`paintingSets ${painting.orientation}`}
                                     src={`https://aw-backend.onrender.com/${painting.image}`}
                                     alt={painting.name}
-                                    onLoad={(event) => handleImageLoad(painting.id, event)}
                                 />
                             </div>
                             <div className="infoSets">

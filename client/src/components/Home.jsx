@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
@@ -17,6 +17,7 @@ export default function Home() {
     const [loading, setLoading] = useState(true);
     const [delay, setDelay] = useState(true);
     const navigate = useNavigate();
+    const paintingRefs = useRef({});
 
     useEffect(() => {
         const fetchPaintings = async () => {
@@ -29,6 +30,13 @@ export default function Home() {
                 setPaintingsList(paintingsListRes.data);
                 setSoldPaintings(soldPaintingsRes.data);
                 setLoading(false);
+
+                const storedPaintingId = sessionStorage.getItem('clickedPaintingId');
+                if (storedPaintingId && paintingRefs.current[storedPaintingId]) {
+                    paintingRefs.current[storedPaintingId].scrollIntoView({ behavior: 'smooth' });
+                    sessionStorage.removeItem('clickedPaintingId');
+                }
+
             } catch (err) {
                 console.error("Error fetching paintings", err);
                 setLoading(false);
@@ -46,6 +54,7 @@ export default function Home() {
     }, []);
 
     const handlePaintingClick = (painting) => {
+        sessionStorage.setItem('clickedPaintingId', painting.id);
         navigate('/showroom', { state: { painting } });
     };
 
@@ -75,13 +84,12 @@ export default function Home() {
 
                 {paintingsList.map((painting) => (
                     <div key={painting.id} className="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
-                        <div className="display">
+                        <div className="display" ref={(el) => (paintingRefs.current[painting.id] = el)}>
                             <div className="canvas" onClick={() => handlePaintingClick(painting)}>
                                 <img
                                     className={`painting ${painting.orientation}`}
                                     src={`https://aw-backend.onrender.com/${painting.image}`}
                                     alt={painting.name}
-                                    onLoad={(event) => handleImageLoad(painting.id, event)}
                                 />
                             </div>
                             <div className="info">
@@ -95,13 +103,12 @@ export default function Home() {
 
                 {soldPaintings.map((painting) => (
                     <div key={painting.id} className="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
-                        <div className="display">
+                        <div className="display" ref={(el) => (paintingRefs.current[painting.id] = el)}>
                             <div className="canvas" onClick={() => handlePaintingClick(painting)}>
                                 <img
                                     className={`painting ${painting.orientation}`}
-                                    src={`https://aw-backend.onrender.com/${painting.image}`}
+                                    src={`http://localhost:5000/${painting.image}`}
                                     alt={painting.name}
-                                    onLoad={(event) => handleImageLoad(painting.id, event)}
                                 />
                             </div>
                             <div className="info d-flex justify-content-center">
