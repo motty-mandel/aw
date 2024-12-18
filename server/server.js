@@ -138,7 +138,7 @@ const paintings = [
         id: 14,
         image: "images/celebration.jpg",
         name: 'Celebration',
-        price: "175",
+        price: "100",
         stripeId: 'price_1QN07g08itiWYv2ZBugw6GVh',
         size: " 48x12",
         orientation: 'landscape',
@@ -147,7 +147,7 @@ const paintings = [
         id: 15,
         image: "images/israel.jpg",
         name: 'Long Live Israel',
-        price: "175",
+        price: "100",
         stripeId: 'price_1QN08g08itiWYv2ZoX0nzmse',
         size: " 48x12",
         orientation: 'landscape',
@@ -156,7 +156,7 @@ const paintings = [
         id: 16,
         image: "images/bliss.jpg",
         name: 'Bliss',
-        price: "175",
+        price: "100",
         stripeId: 'price_1QN09F08itiWYv2ZHmRaF6DL',
         size: " 48x12",
         orientation: 'landscape',
@@ -225,6 +225,11 @@ const sold = [
     {
         id: 3,
         image: "/images/westernWallSold.jpg",
+        orientation: 'portrait',
+    },
+    {
+        id: 4,
+        image: "/images/sunset-sailing.jpg",
         orientation: 'portrait',
     },
 ]

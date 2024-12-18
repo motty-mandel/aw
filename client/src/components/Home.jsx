@@ -107,7 +107,7 @@ export default function Home() {
                             <div className="canvas" onClick={() => handlePaintingClick(painting)}>
                                 <img
                                     className={`painting ${painting.orientation}`}
-                                    src={`http://localhost:5000/${painting.image}`}
+                                    src={`https://aw-backend.onrender.com/${painting.image}`}
                                     alt={painting.name}
                                 />
                             </div>
