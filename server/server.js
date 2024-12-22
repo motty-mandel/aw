@@ -160,6 +160,15 @@ const paintings = [
         stripeId: 'price_1QN09F08itiWYv2ZHmRaF6DL',
         size: " 48x12",
         orientation: 'landscape',
+    },
+    {
+        id: 17,
+        image: "images/sunsetSailing.jpg",
+        name: 'Sunset Sailing',
+        price: "300",
+        stripeId: 'price_1QN09F08itiWYv2ZHmRaF6DL',
+        size: " 12x48",
+        orientation: 'portrait',
     }
 ];
 
@@ -229,7 +238,7 @@ const sold = [
     },
     {
         id: 4,
-        image: "/images/sunset-sailing.jpg",
+        image: "/images/jerusalemWalkway.jpg",
         orientation: 'portrait',
     },
 ]
