@@ -49,12 +49,12 @@ export default function Connect() {
 
                 <div className="form-group name-input">
                     <label htmlFor="exampleFormControlInput1">Name</label>
-                    <input name="user_name" type="name" className="form-control name" id="exampleFormControlInput1" placeholder="Name" />
+                    <input name="user_name" type="name" className="form-control name" id="exampleFormControlInput1" />
                 </div>
 
                 <div className="form-group email-input">
                     <label htmlFor="exampleFormControlInput1">Email address</label>
-                    <input name="user_email" type="email" className="form-control email" id="exampleFormControlInput2" placeholder="name@example.com" />
+                    <input name="user_email" type="email" className="form-control email" id="exampleFormControlInput2" />
                 </div>
 
                 <div className="form-group message-input">

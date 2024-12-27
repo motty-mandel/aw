@@ -1,13 +1,15 @@
 .canvasSets {
     width: 300px;
-    margin: 50px 0 0;
+    margin: 50px 0 10px;
 }
 
 .paintingSets {
     border-radius: 20px 20px 20px 20px;
-    border: 10px solid #e5fdef;
+    border: 10px solid #efeeee;
     cursor: pointer;
     transition: ease-in-out 200ms;
+    box-shadow: -0.3em -0.3em 0.5em #ffffff,
+    0.3em 0.3em 0.5em #d1cdc7;
 }
 
 .infoSets {
@@ -16,11 +18,14 @@
     align-items: center;
     width: 100%;
     height: 100px;
-    background-color: #e5fdef;
+    background-color: #efeeee;
+    color: rgba(0, 52, 105, 0.75);
     margin: 0 0 50px 0;
     padding: 10px;
     border-radius: 10px;
     transition: ease-in-out 500ms;
+    box-shadow: inset -0.3em -0.3em 0.5em #ffffff,
+    inset 0.3em 0.3em 0.5em #d1cdc7;
 }
 
 .infoSets p {
@@ -35,12 +40,11 @@
     background-color: white;
     border-color: black;
     font-family: "Grey Qo", cursive;
-    line-height: 50px;
-    font-size: xx-large;
+    font-size: x-large;
 }
 
 .paintingSets:hover {
-    box-shadow: 6px 6px 10px 3px #595959, -6px 6px 10px 3px #595959, -6px -6px 10px 3px #595959, 6px -6px 10px 3px #595959;
+    transform: translate(0, -15px);
 }
 
 .paintingSets.portrait {

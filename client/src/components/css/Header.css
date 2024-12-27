@@ -23,8 +23,10 @@
 /* Profile */
 .profile img {
     border-radius: 20px;
-    border: solid 5px black;
+    border: solid 5px #efeeee;
     margin: 0px 55px 0 55px;
+    box-shadow: -0.3em -0.3em 0.5em #ffffff,
+    0.3em 0.3em 0.5em #d1cdc7;
 }
 
 /* "Avigails Paintings" */
@@ -40,6 +42,7 @@
 .center-nav a {
     text-decoration: none;
     cursor: default;
+    margin-bottom: 20px;
 }
 
 .right-nav .links {
@@ -57,12 +60,10 @@
     cursor: pointer;
     font-family: 'customFont';
     font-size: small;
-    padding: 10px;
-    margin-bottom: 5px;
-    border: solid 2px black;
-}
-
-.right-nav .links p:focus {
-    box-shadow: inset 2px 2px 0.5em black, inset -2px -2px 0.5em black;
-    transform: translate(-2px, -2px );
+    padding: 15px;
+    margin: 5px;
+    border: solid 2px #efeeee;
+    border-radius: 10px;
+    box-shadow: inset -0.3em -0.3em 0.5em #ffffff,
+    inset 0.3em 0.3em 0.5em #d1cdc7;
 }
