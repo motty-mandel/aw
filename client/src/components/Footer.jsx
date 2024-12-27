@@ -8,8 +8,6 @@ import "./css/footerMobile.css";
 
 export default function Footer() {
     return (
-        <footer>
-            {/* <!-- Footer --> */}
             <footer className="text-center text-lg-start">
 
                 {/* <!-- Section: Social media --> */}
@@ -55,7 +53,5 @@ export default function Footer() {
                 </section>
                 {/* <!-- Section: Links  --> */}
             </footer>
-            {/* <!-- Footer --> */}
-        </footer>
     );
 }

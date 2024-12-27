@@ -1,12 +1,4 @@
 @media screen and (max-width: 768px) {
-    .products {
-        display: none;
-    }
-
-    .useful-links {
-        display: none;
-    }
-
     .instaLink {
         margin: 0!important;
     }

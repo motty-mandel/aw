@@ -18,6 +18,7 @@ export default function Home() {
     const [delay, setDelay] = useState(true);
     const navigate = useNavigate();
     const paintingRefs = useRef({});
+    // const observer = useRef(null);
 
     useEffect(() => {
         const fetchPaintings = async () => {
@@ -53,6 +54,41 @@ export default function Home() {
 
     }, []);
 
+    // useEffect(() => {
+    //     observer.current = new IntersectionObserver((entries) => {
+    //         let closestEntry = null;
+    //         let closestDistance = Infinity;
+
+    //         entries.forEach(entry => {
+    //             const rect = entry.target.getBoundingClientRect();
+    //             const distance = Math.abs(rect.top + rect.height / 2 - window.innerHeight / 2);
+
+    //             if (distance < closestDistance) {
+    //                 closestDistance = distance;
+    //                 closestEntry = entry;
+    //             }
+    //         });
+
+    //         if (closestEntry) {
+    //             closestEntry.target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    //         }
+    //     }, { threshold: 0.5 });
+
+    //     const currentObserver = observer.current;
+
+    //     Object.values(paintingRefs.current).forEach(ref => {
+    //         if (ref) {
+    //             currentObserver.observe(ref);
+    //         }
+    //     });
+
+    //     return () => {
+    //         if (currentObserver) {
+    //             currentObserver.disconnect();
+    //         }
+    //     };
+    // }, [paintingsList, soldPaintings])
+
     const handlePaintingClick = (painting) => {
         sessionStorage.setItem('clickedPaintingId', painting.id);
         navigate('/showroom', { state: { painting } });
@@ -79,46 +115,49 @@ export default function Home() {
     }
 
     return (
-        <div className="container">
-            <div className="row">
+        <>
 
-                {paintingsList.map((painting) => (
-                    <div key={painting.id} className="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
-                        <div className="display" ref={(el) => (paintingRefs.current[painting.id] = el)}>
-                            <div className="canvas" onClick={() => handlePaintingClick(painting)}>
-                                <img
-                                    className={`painting ${painting.orientation}`}
-                                    src={`https://aw-backend.onrender.com/${painting.image}`}
-                                    alt={painting.name}
-                                />
-                            </div>
-                            <div className="info">
-                                <p>Name: {painting.name} <br />
-                                    Price: ${painting.price}</p>
-                                <button onClick={() => handleBuyClick(painting.stripeId)}>Buy</button>
+            <div className="container">
+                <div className="row">
+
+                    {paintingsList.map((painting) => (
+                        <div key={painting.id} className="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
+                            <div className="display" ref={(el) => (paintingRefs.current[painting.id] = el)}>
+                                <div className="canvas" onClick={() => handlePaintingClick(painting)}>
+                                    <img
+                                        className={`painting ${painting.orientation}`}
+                                        src={`https://aw-backend.onrender.com/${painting.image}`}
+                                        alt={painting.name}
+                                    />
+                                </div>
+                                <div className="info">
+                                    <p>Name: {painting.name} <br />
+                                        Price: ${painting.price}</p>
+                                    <button onClick={() => handleBuyClick(painting.stripeId)}>Buy</button>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                ))}
+                    ))}
 
-                {soldPaintings.map((painting) => (
-                    <div key={painting.id} className="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
-                        <div className="display" ref={(el) => (paintingRefs.current[painting.id] = el)}>
-                            <div className="canvas" onClick={() => handlePaintingClick(painting)}>
-                                <img
-                                    className={`painting ${painting.orientation}`}
-                                    src={`https://aw-backend.onrender.com/${painting.image}`}
-                                    alt={painting.name}
-                                />
-                            </div>
-                            <div className="info d-flex justify-content-center">
-                                <p>Sold</p>
+                    {soldPaintings.map((painting) => (
+                        <div key={painting.id} className="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
+                            <div className="display" ref={(el) => (paintingRefs.current[painting.id] = el)}>
+                                <div className="canvas" onClick={() => handlePaintingClick(painting)}>
+                                    <img
+                                        className={`painting ${painting.orientation}`}
+                                        src={`https://aw-backend.onrender.com/${painting.image}`}
+                                        alt={painting.name}
+                                    />
+                                </div>
+                                <div className="info d-flex justify-content-center">
+                                    <p>Sold</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                ))}
+                    ))}
 
+                </div>
             </div>
-        </div>
+        </>
     );
 };

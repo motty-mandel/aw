@@ -15,7 +15,7 @@ function App() {
     
     return (
         <div className='app-content'>
-            <Header />
+            {!isShowroomRoute && <Header />}
             {isShowroomRoute ? <Showroom /> : <Outlet />}
             {!isShowroomRoute && <Footer />}
         </div>

@@ -1,9 +1,11 @@
 footer {
-    background-color: #e5fdef;
+    margin: 10px;
+    background-color: #efeeee;
     color: rgba(0, 52, 105, 0.75);
     transition: ease-in-out 500ms;
-    border-radius: 50px;
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37)
+    border-radius: 20px;
+    box-shadow: -0.3em -0.3em 0.5em #ffffff,
+    0.3em 0.3em 0.5em #d1cdc7;
 }
 
 .bio .container {

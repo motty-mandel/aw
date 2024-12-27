@@ -34,20 +34,20 @@ export default function Header() {
 
     return (
         <div className={`App-${theme}`}>
-            <div className="main-man d-flex align-items-center justify-content-between">
+            <div className="d-flex align-items-center justify-content-between">
 
-                <header className="header d-flex flex-row align-items-center justify-content-between p-3">
-
+                <header className="d-flex flex-row align-items-center justify-content-between p-3 header">
+                    
                     <div className="profile left-nav">
                         <img src={avigailProfile} alt="profile-pic" height={'150px'} />
                     </div>
 
-                    <nav className="navbar d-flex flex-column align-items-center center-nav">
-                        <Link to={'/'} className="no-underline"><span className="navbar mb-0 pb-0 header-span">Avigails Art</span></Link>
+                    <nav className="d-flex flex-column align-items-center center-nav">
+                        <Link to={'/'}><span className="mb-0 pb-0 header-span">Avigails Art</span></Link>
                         <img src={lightBorderPic} alt="flower-border" height={"70px"} />
                     </nav>
 
-                    <div className="right-nav d-flex align-items-center">
+                    <div className="d-flex align-items-center right-nav">
                         <div className="links">
                             <Link to={'/'}><p>Home</p></Link>
                             <Link to={'/sets'}><p>Painting sets</p></Link>
@@ -56,9 +56,12 @@ export default function Header() {
                         </div>
                     </div>
 
+
                 </header>
 
             </div>
         </div>
     );
 }
+
+{/*  */ }

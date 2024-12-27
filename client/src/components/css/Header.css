@@ -11,19 +11,20 @@
 
 /* Header settings */
 .header {
+    margin: 10px;
     width: 100vw;
-    background-color: var(--main-background);
-    margin-top: -40px;
+    background-color: #efeeee;
     transition: ease-in-out 500ms;
-    border-radius: 50px;
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37)
+    border-radius: 20px;
+    box-shadow: -0.3em -0.3em 0.5em #ffffff,
+    0.3em 0.3em 0.5em #d1cdc7;
 }
 
 /* Profile */
 .profile img {
     border-radius: 20px;
     border: solid 5px black;
-    margin: 30px 55px 0 55px;
+    margin: 0px 55px 0 55px;
 }
 
 /* "Avigails Paintings" */
@@ -36,13 +37,9 @@
     color: black;
 }
 
-.no-underline,
-.no-underline:hover {
+.center-nav a {
     text-decoration: none;
-}
-
-.right-nav {
-    padding-top: 40px;
+    cursor: default;
 }
 
 .right-nav .links {
@@ -56,12 +53,16 @@
 }
 
 .right-nav .links p {
-    padding: 0 20px 5px 20px;
     color: black;
     cursor: pointer;
     font-family: 'customFont';
     font-size: small;
-    border-bottom: thick double;
-    border-right: thick double;
-    border-left: thick double;
+    padding: 10px;
+    margin-bottom: 5px;
+    border: solid 2px black;
+}
+
+.right-nav .links p:focus {
+    box-shadow: inset 2px 2px 0.5em black, inset -2px -2px 0.5em black;
+    transform: translate(-2px, -2px );
 }
