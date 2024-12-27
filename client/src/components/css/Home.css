@@ -7,11 +7,11 @@
 .painting {
     height: 300px;
     border-radius: 20px 20px 20px 20px;
-    border: 10px solid #efeeee;
+    border: solid 10px #efeeee;
     cursor: pointer;
-    transition: ease-in-out 200ms;
     box-shadow: -0.3em -0.3em 0.5em #ffffff,
     0.3em 0.3em 0.5em #d1cdc7;
+    transition: ease-in-out 500ms;
 }
 
 .info {
@@ -24,10 +24,10 @@
     margin: 0 0 50px 0;
     padding: 10px;
     border-radius: 10px;
-    transition: ease-in-out 500ms;
     color: rgba(0, 52, 105, 0.75);
     box-shadow: inset -0.3em -0.3em 0.5em #ffffff,
     inset 0.3em 0.3em 0.5em #d1cdc7;
+    transition: ease-in-out 500ms;
 }
 
 .info p {
@@ -46,8 +46,8 @@
 }
 
 .painting:hover {
-    /* box-shadow: 6px 6px 10px 3px #595959, -6px 6px 10px 3px #595959, -6px -6px 10px 3px #595959, 6px -6px 10px 3px #595959; */
     transform: translate(0, -15px);
+    transition: ease-in-out 200ms;
 }
 
 .landscape {
