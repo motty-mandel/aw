@@ -32,12 +32,6 @@ export default function Home() {
                 setSoldPaintings(soldPaintingsRes.data);
                 setLoading(false);
 
-                const storedPaintingId = sessionStorage.getItem('clickedPaintingId');
-                if (storedPaintingId && paintingRefs.current[storedPaintingId]) {
-                    paintingRefs.current[storedPaintingId].scrollIntoView({ behavior: 'smooth' });
-                    sessionStorage.removeItem('clickedPaintingId');
-                }
-
             } catch (err) {
                 console.error("Error fetching paintings", err);
                 setLoading(false);
@@ -53,41 +47,6 @@ export default function Home() {
         return () => clearTimeout(timer);
 
     }, []);
-
-    // useEffect(() => {
-    //     observer.current = new IntersectionObserver((entries) => {
-    //         let closestEntry = null;
-    //         let closestDistance = Infinity;
-
-    //         entries.forEach(entry => {
-    //             const rect = entry.target.getBoundingClientRect();
-    //             const distance = Math.abs(rect.top + rect.height / 2 - window.innerHeight / 2);
-
-    //             if (distance < closestDistance) {
-    //                 closestDistance = distance;
-    //                 closestEntry = entry;
-    //             }
-    //         });
-
-    //         if (closestEntry) {
-    //             closestEntry.target.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    //         }
-    //     }, { threshold: 0.5 });
-
-    //     const currentObserver = observer.current;
-
-    //     Object.values(paintingRefs.current).forEach(ref => {
-    //         if (ref) {
-    //             currentObserver.observe(ref);
-    //         }
-    //     });
-
-    //     return () => {
-    //         if (currentObserver) {
-    //             currentObserver.disconnect();
-    //         }
-    //     };
-    // }, [paintingsList, soldPaintings])
 
     const handlePaintingClick = (painting) => {
         sessionStorage.setItem('clickedPaintingId', painting.id);
@@ -130,11 +89,11 @@ export default function Home() {
                                         alt={painting.name}
                                     />
                                 </div>
-                                <div className="info">
+                                {/* <div className="info">
                                     <p>Name: {painting.name} <br />
                                         Price: ${painting.price}</p>
                                     <button onClick={() => handleBuyClick(painting.stripeId)}>Buy</button>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                     ))}
@@ -149,9 +108,9 @@ export default function Home() {
                                         alt={painting.name}
                                     />
                                 </div>
-                                <div className="info d-flex justify-content-center">
+                                {/* <div className="info d-flex justify-content-center">
                                     <p>Sold</p>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                     ))}

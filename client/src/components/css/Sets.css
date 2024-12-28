@@ -7,7 +7,7 @@
     border-radius: 20px 20px 20px 20px;
     border: 10px solid #efeeee;
     cursor: pointer;
-    transition: ease-in-out 200ms;
+    transition: ease-in-out 500ms;
     box-shadow: -0.3em -0.3em 0.5em #ffffff,
     0.3em 0.3em 0.5em #d1cdc7;
 }
@@ -41,10 +41,6 @@
     border-color: black;
     font-family: "Grey Qo", cursive;
     font-size: x-large;
-}
-
-.paintingSets:hover {
-    transform: translate(0, -15px);
 }
 
 .paintingSets.portrait {

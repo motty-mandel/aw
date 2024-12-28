@@ -77,11 +77,11 @@ export default function Sets() {
                                     alt={painting.name}
                                 />
                             </div>
-                            <div className="infoSets">
+                            {/* <div className="infoSets">
                                 <p>Name: {painting.name} <br />
                                     Price: ${painting.price}</p>
                                     <button className='buttonSets' onClick={() => handleBuyClick(painting.stripeId)}>Buy</button>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 ))}

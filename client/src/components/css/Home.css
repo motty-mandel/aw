@@ -45,11 +45,6 @@
     font-size: x-large;
 }
 
-.painting:hover {
-    transform: translate(0, -15px);
-    transition: ease-in-out 200ms;
-}
-
 .landscape {
     height: auto;
     width: 100%;

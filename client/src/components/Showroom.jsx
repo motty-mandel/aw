@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import "./css/Showroom.css";
@@ -37,6 +38,18 @@ const Showroom = () => {
         }));
     };
 
+    const handleBuyClick = async (stripeId) => {
+        try {
+            const response = await axios.post('https://aw-backend.onrender.com/create-checkout-session', {
+                stripeId: stripeId,
+            });
+            const { url } = response.data;
+            window.location.href = url;
+        } catch (error) {
+            console.error('Error creating checkout session:', error.response);
+        }
+    };
+
     if (!painting) {
         return (
             <div className="error">
@@ -47,10 +60,16 @@ const Showroom = () => {
 
     return (
         <>
-            <div className='showroomMain'>
-                <div className="backButton">
+            <div className='showroom-main'>
+                
+                <div className="information">
                     <p className="fa-solid fa-arrow-left" onClick={() => navigate(-1)}> Back</p>
+                    <p className="fa-solid fa-ruler-combined measure">{painting.size}</p>
+                    <p>{painting.name}</p>
+                    <button onClick={() => handleBuyClick(painting.stripeId)}>Buy</button>
+
                 </div>
+
                 <div className="showroom">
                     <img
                         className={`image ${imageClasses[painting.id] || ''}`}
@@ -58,9 +77,7 @@ const Showroom = () => {
                         onLoad={(event) => handleImageLoad(painting.id, event)}
                     />
                 </div>
-                <div className='size'>
-                    <p className="fa-solid fa-ruler-combined measure">{painting.size}</p>
-                </div>
+
             </div>
         </>
     );

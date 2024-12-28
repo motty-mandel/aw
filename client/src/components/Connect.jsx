@@ -47,17 +47,17 @@ export default function Connect() {
 
                 <input type="hidden" name="contact_number" value="697483" />
 
-                <div className="form-group name-input">
+                <div className="form-group name-sec">
                     <label htmlFor="exampleFormControlInput1">Name</label>
                     <input name="user_name" type="name" className="form-control name" id="exampleFormControlInput1" />
                 </div>
 
-                <div className="form-group email-input">
+                <div className="form-group email-sec">
                     <label htmlFor="exampleFormControlInput1">Email address</label>
                     <input name="user_email" type="email" className="form-control email" id="exampleFormControlInput2" />
                 </div>
 
-                <div className="form-group message-input">
+                <div className="form-group message-sec">
                     <label htmlFor="exampleFormControlTextarea1">Message</label>
                     <textarea name="message" className="form-control message" id="exampleFormControlTextarea1" rows="3"></textarea>
                 </div>

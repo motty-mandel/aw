@@ -1,28 +1,50 @@
-.showroomMain {
+.showroom-main {
+    margin-top: 70px;
     display: flex;
     justify-content: space-evenly;
     flex-direction: row;
     align-items: center;
 }
 
+.information {
+    padding: 20px;
+    font-family: "Font Awesome 6 Free";
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-radius: 10px;
+    border: solid 5px #efeeee;
+    box-shadow: -0.3em -0.3em 0.5em #ffffff,
+    0.3em 0.3em 0.5em #d1cdc7, inset -0.3em -0.3em 0.5em #ffffff,
+    inset 0.3em 0.3em 0.5em #d1cdc7;
+
+    & > p {
+        margin: 20px;
+    }
+
+    &> p:first-of-type {
+        cursor: pointer;
+        width: fit-content;
+    }
+}
+
+.information p:last-of-type {
+    font-weight: 900;
+    font-size: large;
+}
+
 .showroom {
     margin: 0;
     padding: 30px 50px;
+    box-shadow: -0.3em -0.3em 0.5em #ffffff,
+    0.3em 0.3em 0.5em #d1cdc7;
 }
 
 .image {
-    height: 850px;
+    height: 700px;
     border: solid 10px black;
 }
 
 .image.wideShow {
     height: 350px;
-}
-
-.backButton {
-    margin: 20px 0 0 0px;
-}
-
-.backButton p {
-    cursor: pointer;
 }
