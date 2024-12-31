@@ -67,7 +67,6 @@ const Showroom = () => {
                     <p className="fa-solid fa-ruler-combined measure">{painting.size}</p>
                     <p>{painting.name}</p>
                     <button onClick={() => handleBuyClick(painting.stripeId)}>Buy</button>
-
                 </div>
 
                 <div className="showroom">

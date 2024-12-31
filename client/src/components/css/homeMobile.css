@@ -1,0 +1,10 @@
+@media screen and (max-width: 1400px) {
+    .painting {
+        height: 200px;
+    }
+
+    .painting.landscape {
+        width: 200px;
+        height: auto;
+    }
+}

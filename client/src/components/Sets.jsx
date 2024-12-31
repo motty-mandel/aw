@@ -68,7 +68,7 @@ export default function Sets() {
             <div className="row">
 
                 {paintingsList.map((painting) => (
-                    <div key={painting.id} className="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
+                    <div key={painting.id} className="col-6 col-md-6 col-lg-4 d-flex justify-content-center">
                         <div className="displaySets">
                             <div className="canvasSets" onClick={() => handlePaintingClick(painting)}>
                             <img

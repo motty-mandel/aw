@@ -1,5 +1,13 @@
-@media screen and (max-width: 1500px) {
-    .paintingSets {
-        box-shadow: 6px 6px 10px 3px #595959, -6px 6px 10px 3px #595959, -6px -6px 10px 3px #595959, 6px -6px 10px 3px #595959;
+@media screen and (max-width: 1400px) {
+    .canvasSets {
+        width: 200px;
+    }
+
+    .paintingSets.portrait {
+        height: 200px;
+    }
+    
+    .paintingSets.landscape {
+        width: 200px;
     }
 }
