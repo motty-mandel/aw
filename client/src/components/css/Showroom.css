@@ -8,7 +8,7 @@
 }
 
 .information {
-    padding: 20px;
+    padding: 10px;
     font-family: "Font Awesome 6 Free";
     display: flex;
     flex-direction: column;
@@ -23,20 +23,31 @@
         margin: 20px;
     }
 
-    &> p:first-of-type {
+    & > p:first-of-type {
         cursor: pointer;
         width: fit-content;
     }
+
+    & > p:last-of-type {
+        font-weight: 900;
+        font-size: large;
+    }
 }
 
-.information p:last-of-type {
-    font-weight: 900;
-    font-size: large;
+.information button {
+    background: transparent;
+    color: #efeeee;
+    border: solid 2px #efeeee;
+}
+
+.information h1 {
+    margin: 0;
+    padding: 10px;
 }
 
 .showroom {
     margin: 0;
-    padding: 30px 50px;
+    padding: 20px 20px;
     box-shadow: -0.3em -0.3em 0.5em #ffffff,
     0.3em 0.3em 0.5em #d1cdc7;
 }

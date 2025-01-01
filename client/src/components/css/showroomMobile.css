@@ -7,6 +7,7 @@
     }
 
     .information {
+        align-items: center;
         flex-direction: row;
         flex-wrap: wrap;
     }
@@ -14,19 +15,15 @@
     .image.landscapeShow {
         width: 700px;
         height: auto;
-        margin-top: 40px;
     }
 
     .image.portraitShow {
         height: 700px;
+        max-width: 362.28px;
     }
 
     .image.wideShow {
         height: 250px;
-    }
-
-    .showroom {
-        padding: 20px;
     }
 
     .backButton {
@@ -57,7 +54,7 @@
 
 @media screen and (max-width: 768px){
     .image.landscapeShow {
-        width: 400px;
+        width: 362.28px;
         height: auto;
     }
 
@@ -67,13 +64,6 @@
 
     .image.wideShow {
         height: 150px;
-    }
-
-    .showroomMain {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
     }
 
     .backButton {

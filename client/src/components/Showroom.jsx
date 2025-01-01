@@ -61,12 +61,20 @@ const Showroom = () => {
     return (
         <>
             <div className='showroom-main'>
-                
+
                 <div className="information">
                     <p className="fa-solid fa-arrow-left" onClick={() => navigate(-1)}> Back</p>
-                    <p className="fa-solid fa-ruler-combined measure">{painting.size}</p>
                     <p>{painting.name}</p>
-                    <button onClick={() => handleBuyClick(painting.stripeId)}>Buy</button>
+
+                    {!painting.price ? (
+                        <h1>Sold</h1>
+                    ) : (
+                        <>
+                            <p className="fa-solid fa-ruler-combined measure">{painting.size}</p>
+                            <button onClick={() => handleBuyClick(painting.stripeId)}>Buy</button>
+                        </>
+                    )}
+                    
                 </div>
 
                 <div className="showroom">

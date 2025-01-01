@@ -134,10 +134,24 @@
 /* -------------------------------------------- */
 /* Showroom dark mode */
 
-.Dark .backButton {
-    color: var(--darkMode-lights);
+.Dark .showroom-main {
+    background-color: var(--darkMode-background);
+    transition: ease-in-out 500ms;
 }
 
-.Dark .measure {
-    color: var(--darkMode-lights);
+.Dark .information {
+    color: #efeeee;
+    border: solid 5px var(--darkMode-background);
+    box-shadow: -0.3em -0.3em 0.5em #373d42,
+    0.3em 0.3em 0.5em #1c1e22, inset -0.3em -0.3em 0.5em #373d42,
+    inset 0.3em 0.3em 0.5em #1c1e22;
+    transition: ease-in-out 500ms;
+}
+
+.Dark .showroom {
+    margin: 0;
+    padding: 20px;
+    box-shadow: -0.3em -0.3em 0.5em #373d42,
+    0.3em 0.3em 0.5em #1c1e22;
+    transition: ease-in-out 500ms;
 }
