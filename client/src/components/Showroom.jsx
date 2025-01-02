@@ -65,7 +65,7 @@ const Showroom = () => {
                 <div className="information">
                     <p className="fa-solid fa-arrow-left" onClick={() => navigate(-1)}> Back</p>
                     <p>{painting.name}</p>
-                    <p>{painting.price}</p>
+                    <p>${painting.price}</p>
 
                     {!painting.price ? (
                         <h1>Sold</h1>
