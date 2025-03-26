@@ -7,6 +7,9 @@ import "./css/darkMode.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Connect() {
+    const nameRef = useRef();
+    const emailRef = useRef();
+    const messageRef = useRef();
 
     const form = useRef();
 
@@ -17,18 +20,23 @@ export default function Connect() {
     const sendEmail = (e) => {
         e.preventDefault();
 
+        if (!nameRef.current.value || !emailRef.current.value || !messageRef.current.value) {
+            alert('Please try again');
+            return;
+        }
+
         emailjs.sendForm('service_bgkimz8', 'template_j0k8d1e', form.current)
             .then(() => {
                 console.log('Success');
                 alert('Message sent successfully');
                 clearInputs();
             }, (error) => {
-                console.log('Failed...', error);
+                console.log('Failed...');
                 alert('Please try again');
             })
     };
 
-    const clearInputs = (e) => {
+    const clearInputs = () => {
 
         const name = document.getElementsByClassName('name')[0];
         const email = document.getElementsByClassName('email')[0];
@@ -49,17 +57,35 @@ export default function Connect() {
 
                 <div className="form-group name-sec">
                     <label htmlFor="exampleFormControlInput1">Name</label>
-                    <input name="user_name" type="name" className="form-control name" id="exampleFormControlInput1" />
+                    <input
+                        name="user_name"
+                        type="name" 
+                        className="form-control name"
+                        id="exampleFormControlInput1"
+                        ref={nameRef}
+                    />
                 </div>
 
                 <div className="form-group email-sec">
                     <label htmlFor="exampleFormControlInput1">Email address</label>
-                    <input name="user_email" type="email" className="form-control email" id="exampleFormControlInput2" />
+                    <input
+                        name="user_email"
+                        type="email"
+                        className="form-control email"
+                        id="exampleFormControlInput2"
+                        ref={emailRef}
+                    />
                 </div>
 
                 <div className="form-group message-sec">
                     <label htmlFor="exampleFormControlTextarea1">Message</label>
-                    <textarea name="message" className="form-control message" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <textarea
+                        name="message"
+                        className="form-control message"
+                        id="exampleFormControlTextarea1"
+                        rows="3"
+                        ref={messageRef}
+                    ></textarea>
                 </div>
 
                 <button type="submit" className="btn btn-primary">Send</button>

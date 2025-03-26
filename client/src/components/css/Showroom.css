@@ -37,12 +37,21 @@
 .information button {
     background: transparent;
     color: black;
-    border: solid 2px black;
+    border-radius: 5px;
+    box-shadow: inset -0.3em -0.3em 0.5em #ffffff,
+    inset 0.3em 0.3em 0.5em #d1cdc7;
+    border: none;
 }
 
 .information h1 {
     margin: 0;
     padding: 10px;
+}
+
+.name p {
+    font-family: "Font Awesome 6 Free";
+    letter-spacing: 0.1rem;
+    color: black;
 }
 
 .showroom {

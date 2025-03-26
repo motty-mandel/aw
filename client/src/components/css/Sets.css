@@ -51,3 +51,8 @@
 .paintingSets.landscape {
     width: 300px;
 }
+
+.paintingSets:hover {
+    transform: translate(0, -15px);
+    transition: ease-in-out 200ms;
+}
