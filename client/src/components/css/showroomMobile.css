@@ -1,3 +1,17 @@
+@media screen and (max-width: 1600px) {
+    .image.landscapeShow {
+        height: 600px;
+    }
+
+    .image.portraitShow {
+        height: 600px;
+    }
+
+    .image.wideShow {
+        height: 250px;
+    }
+}
+
 @media screen and (max-width: 1400px) {
     .showroom-main {
         margin-top: 0;

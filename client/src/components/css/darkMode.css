@@ -116,6 +116,7 @@
 }
 
 .Dark .form-control {
+    color: var(--darkMode-font);
     border-radius: 50px;
     border: solid 1px var(--darkMode-background)!important;
     box-shadow: inset -0.3em -0.3em 0.5em #373d42,
@@ -172,6 +173,6 @@
     border: none;
 }
 
-.name p {
+.Dark .name p {
     color:  #efeeee;
 }

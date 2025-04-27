@@ -64,13 +64,13 @@ const Showroom = () => {
 
                 <div className="information">
                     <p className="fa-solid fa-arrow-left" onClick={() => navigate(-1)}> Back</p>
-                    <p>${painting.price}</p>
-
+                    
                     {!painting.price ? (
                         <h1>Sold</h1>
                     ) : (
                         <>
                             <p className="fa-solid fa-ruler-combined measure">{painting.size}</p>
+                            <p>${painting.price}</p>
                             <button onClick={() => handleBuyClick(painting.stripeId)}>Buy</button>
                         </>
                     )}

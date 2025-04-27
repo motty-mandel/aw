@@ -8,6 +8,7 @@ import Connect from './components/Connect';
 import Sets from './components/Sets';
 import Showroom from './components/Showroom';
 import Success from "./components/Success";
+import Sold from "./components/Sold";
 
 const router = createBrowserRouter([
     {
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
             {
                 path: "/success",
                 element: <Success />
+            },
+            {
+                path: "/sold",
+                element: <Sold />
             }
         ]
     }
