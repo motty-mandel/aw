@@ -163,7 +163,7 @@ const paintings = [
     },
     {
         id: 17,
-        image: "images/mtSinai.jpg",
+        image: "images/mtSinai.png",
         name: 'Mt. Sinai',
         price: "100",
         stripeId: 'price_1QN09F08itiWYv2ZHmRaF6DL',
@@ -172,7 +172,7 @@ const paintings = [
     },
     {
         id: 18,
-        image: "images/mamaRachel.jpg",
+        image: "images/mamaRachel.JPG",
         name: 'Mama Rachel',
         price: "100",
         stripeId: 'price_1QN09F08itiWYv2ZHmRaF6DL',
@@ -181,7 +181,7 @@ const paintings = [
     },
     {
         id: 19,
-        image: "images/ifIForget.jpg",
+        image: "images/ifIForget.JPG",
         name: 'If I Forget',
         price: "100",
         stripeId: 'price_1QN09F08itiWYv2ZHmRaF6DL',
@@ -190,7 +190,7 @@ const paintings = [
     },
     {
         id: 20,
-        image: "images/theWall.jpg",
+        image: "images/theWall.JPG",
         name: 'The Wall',
         price: "100",
         stripeId: 'price_1QN09F08itiWYv2ZHmRaF6DL',
@@ -199,7 +199,7 @@ const paintings = [
     },
     {
         id: 21,
-        image: "images/galaxy.jpg",
+        image: "images/galaxy.JPG",
         name: 'Galaxy',
         price: "100",
         stripeId: 'price_1QN09F08itiWYv2ZHmRaF6DL',
@@ -208,7 +208,7 @@ const paintings = [
     },
     {
         id: 22,
-        image: "images/tanz.jpg",
+        image: "images/tanz.JPG",
         name: 'Tanz',
         price: "100",
         stripeId: 'price_1QN09F08itiWYv2ZHmRaF6DL',
@@ -217,7 +217,7 @@ const paintings = [
     },
     {
         id: 23,
-        image: "images/beatbox.jpg",
+        image: "images/beatbox.JPG",
         name: 'Beatbox',
         price: "100",
         stripeId: 'price_1QN09F08itiWYv2ZHmRaF6DL',
@@ -226,7 +226,7 @@ const paintings = [
     },
     {
         id: 24,
-        image: "images/mamaRachel2.jpg",
+        image: "images/mamaRachel2.JPG",
         name: 'Mama Rachel 2',
         price: "100",
         stripeId: 'price_1QN09F08itiWYv2ZHmRaF6DL',
@@ -235,7 +235,7 @@ const paintings = [
     },
     {
         id: 25,
-        image: "images/skiing.jpg",
+        image: "images/skiing.JPG",
         name: 'Skiing',
         price: "100",
         stripeId: 'price_1QN09F08itiWYv2ZHmRaF6DL',
