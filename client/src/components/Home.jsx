@@ -13,6 +13,7 @@ import "./css/darkMode.css";
 export default function Home() {
 
     const [paintingsList, setPaintingsList] = useState([]);
+    const [longPaintings, setLongPaintings] = useState([]);
     const [loading, setLoading] = useState(true);
     const [delay, setDelay] = useState(true);
     const navigate = useNavigate();
@@ -22,10 +23,13 @@ export default function Home() {
         const fetchPaintings = async () => {
             try {
                 setLoading(true);
-                const paintingsListRes = await axios.get('https://aw-backend.onrender.com/api/paintings');
+                const [paintingsListRes, longPaintingsRes] = await Promise.all([
+                    axios.get("https://aw-backend.onrender.com/api/paintings"),
+                    axios.get("https://aw-backend.onrender.com/api/longPaintings")
+                ])
                 setPaintingsList(paintingsListRes.data);
+                setLongPaintings(longPaintingsRes.data);
                 setLoading(false);
-
             } catch (err) {
                 console.error("Error fetching paintings", err);
                 setLoading(false);
@@ -86,6 +90,21 @@ export default function Home() {
                             </div>
                         </div>
                     ))}
+                    <br />
+                    {longPaintings.map((painting) => (
+                        <div key={painting.id} className="col-6 col-md-6 col-lg-4 d-flex justify-content-center">
+                            <div className="display" ref={(el) => (paintingRefs.current[painting.id] = el)}>
+                                <div className="canvas" onClick={() => handlePaintingClick(painting)}>
+                                    <img
+                                        className={`painting ${painting.orientation}`}
+                                        src={`https://aw-backend.onrender.com/${painting.image}`}
+                                        alt={painting.name}
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+
                 </div>
             </div>
         </>

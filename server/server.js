@@ -127,69 +127,6 @@ const paintings = [
     },
     {
         id: 13,
-        image: "images/seaSplit.jpg",
-        name: 'Splitting of the Sea',
-        price: "150",
-        stripeId: 'price_1QKQ9F08itiWYv2ZXu2MgksY',
-        size: " 36x24",
-        orientation: 'landscape',
-    },
-    {
-        id: 14,
-        image: "images/celebration.jpg",
-        name: 'Celebration',
-        price: "100",
-        stripeId: 'price_1QN07g08itiWYv2ZBugw6GVh',
-        size: " 48x12",
-        orientation: 'landscape',
-    },
-    {
-        id: 15,
-        image: "images/israel.jpg",
-        name: 'Long Live Israel',
-        price: "100",
-        stripeId: 'price_1QN08g08itiWYv2ZoX0nzmse',
-        size: " 48x12",
-        orientation: 'landscape',
-    },
-    {
-        id: 16,
-        image: "images/bliss.jpg",
-        name: 'Bliss',
-        price: "100",
-        stripeId: 'price_1QN09F08itiWYv2ZHmRaF6DL',
-        size: " 48x12",
-        orientation: 'landscape',
-    },
-    {
-        id: 17,
-        image: "images/mtSinai.png",
-        name: 'Mt. Sinai',
-        price: "100",
-        stripeId: 'price_1QN09F08itiWYv2ZHmRaF6DL',
-        size: " 48x12",
-        orientation: 'portrait',
-    },
-    {
-        id: 18,
-        image: "images/mamaRachel.JPG",
-        name: 'Mama Rachel',
-        price: "100",
-        stripeId: 'price_1QN09F08itiWYv2ZHmRaF6DL',
-        size: " 48x12",
-        orientation: 'portrait',
-    },
-    {
-        id: 19,
-        image: "images/ifIForget.JPG",
-        name: 'If I Forget',
-        price: "100",
-        stripeId: 'price_1QN09F08itiWYv2ZHmRaF6DL',
-        size: " 48x12",
-        orientation: 'portrait',
-    },
-    {
-        id: 20,
         image: "images/theWall.JPG",
         name: 'The Wall',
         price: "100",
@@ -198,25 +135,34 @@ const paintings = [
         orientation: 'portrait',
     },
     {
-        id: 21,
-        image: "images/galaxy.JPG",
-        name: 'Galaxy',
+        id: 14,
+        image: "images/mtSinai.png",
+        name: 'Mt. Sinai',
         price: "100",
         stripeId: 'price_1QN09F08itiWYv2ZHmRaF6DL',
         size: " 48x12",
         orientation: 'portrait',
     },
     {
-        id: 22,
-        image: "images/tanz.JPG",
-        name: 'Tanz',
+        id: 15,
+        image: "images/mamaRachel.JPG",
+        name: 'Mama Rachel',
         price: "100",
         stripeId: 'price_1QN09F08itiWYv2ZHmRaF6DL',
         size: " 48x12",
         orientation: 'portrait',
     },
     {
-        id: 23,
+        id: 16,
+        image: "images/ifIForget.JPG",
+        name: 'If I Forget',
+        price: "100",
+        stripeId: 'price_1QN09F08itiWYv2ZHmRaF6DL',
+        size: " 48x12",
+        orientation: 'portrait',
+    },
+    {
+        id: 17,
         image: "images/beatbox.JPG",
         name: 'Beatbox',
         price: "100",
@@ -225,7 +171,7 @@ const paintings = [
         orientation: 'portrait',
     },
     {
-        id: 24,
+        id: 18,
         image: "images/mamaRachel2.JPG",
         name: 'Mama Rachel 2',
         price: "100",
@@ -234,7 +180,7 @@ const paintings = [
         orientation: 'portrait',
     },
     {
-        id: 25,
+        id: 19,
         image: "images/skiing.JPG",
         name: 'Skiing',
         price: "100",
@@ -243,22 +189,79 @@ const paintings = [
         orientation: 'portrait',
     },
     {
-        id: 26,
-        image: "images/wailingWall.jpg",
-        name: 'Wailing Wall',
-        price: "100",
-        stripeId: 'price_1QN09F08itiWYv2ZHmRaF6DL',
-        size: " 48x12",
-        orientation: 'portrait',
-    },
-    {
-        id: 27,
+        id: 20,
         image: "images/cityDrive.jpg",
         name: 'City Drive',
         price: "100",
         stripeId: 'price_1QN09F08itiWYv2ZHmRaF6DL',
         size: " 48x12",
         orientation: 'portrait',
+    },
+    {
+        id: 21,
+        image: "images/seaSplit.jpg",
+        name: 'Splitting of the Sea',
+        price: "150",
+        stripeId: 'price_1QKQ9F08itiWYv2ZXu2MgksY',
+        size: " 36x24",
+        orientation: 'landscape',
+    },
+    {
+        id: 22,
+        image: "images/galaxy.JPG",
+        name: 'Galaxy',
+        price: "100",
+        stripeId: 'price_1QN09F08itiWYv2ZHmRaF6DL',
+        size: " 48x12",
+        orientation: 'landscape',
+    },
+    {
+        id: 23,
+        image: "images/tanz.JPG",
+        name: 'Tanz',
+        price: "100",
+        stripeId: 'price_1QN09F08itiWYv2ZHmRaF6DL',
+        size: " 48x12",
+        orientation: 'landscape',
+    },
+    {
+        id: 24,
+        image: "images/wailingWall.jpg",
+        name: 'Wailing Wall',
+        price: "100",
+        stripeId: 'price_1QN09F08itiWYv2ZHmRaF6DL',
+        size: " 48x12",
+        orientation: 'landscape',
+    },
+];
+
+const longPaintings = [
+    {
+        id: 1,
+        image: "images/celebration.jpg",
+        name: 'Celebration',
+        price: "100",
+        stripeId: 'price_1QN07g08itiWYv2ZBugw6GVh',
+        size: " 48x12",
+        orientation: 'landscape',
+    },
+    {
+        id: 2,
+        image: "images/israel.jpg",
+        name: 'Long Live Israel',
+        price: "100",
+        stripeId: 'price_1QN08g08itiWYv2ZoX0nzmse',
+        size: " 48x12",
+        orientation: 'landscape',
+    },
+    {
+        id: 3,
+        image: "images/bliss.jpg",
+        name: 'Bliss',
+        price: "100",
+        stripeId: 'price_1QN09F08itiWYv2ZHmRaF6DL',
+        size: " 48x12",
+        orientation: 'landscape',
     },
 ];
 
@@ -337,10 +340,14 @@ const sold = [
         name: 'Sunset Sailing',
         orientation: 'portrait',
     }
-]
+];
 
 app.get('/api/paintings', (req, res) => {
     res.json(paintings);
+});
+
+app.get('/api/longPaintings', (req, res) => {
+    res.json(longPaintings);
 });
 
 app.get('/api/sets', (req, res) => {
@@ -396,7 +403,7 @@ app.post('/webhook', (req, res) => {
     }
 
     res.status(200);
-})
+});
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
