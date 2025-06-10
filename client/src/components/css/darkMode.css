@@ -12,24 +12,32 @@
 
 .Dark .header {
     color: var(--darkMode-lights);
-    background-color: #272d2f;
-    box-shadow: -0.3em -0.3em 0.5em #373d42,
-    0.3em 0.3em 0.5em #1c1e22;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0));
+    backdrop-filter: blur(25px);
+   -webkit-backdrop-filter: blur(25px);;
+   box-shadow: 
+   inset 0 0 0.3em rgba(255, 255, 255, 0.1),
+   0 0.3em 0.6em rgba(0, 0, 0, 0.4),
+   0 0.1em 0.2em rgba(255, 255, 255, 0.1);
     transition: ease-in-out 500ms;
 }
 
 .Dark .profile img {
-    border: solid 5px #272d2f;
-    box-shadow: -0.3em -0.3em 0.5em #373d42,
-    0.3em 0.3em 0.5em #1c1e22;
+    border: solid 5px rgba(0, 0, 0, 0.4);
+    box-shadow: 
+    inset 0 0 0.3em rgba(255, 255, 255, 0.1),
+    0 0.3em 0.6em rgba(0, 0, 0, 0.4),
+    0 0.1em 0.2em rgba(255, 255, 255, 0.1);
     transition: ease-in-out 500ms;
 }
 
 .Dark .right-nav .links p {
     color: #aaa0a0;
-    border: solid 2px #272d2f;
-    box-shadow: inset -0.3em -0.3em 0.5em #373d42,
-    inset 0.3em 0.3em 0.5em #1c1e22;
+    box-shadow: 
+    inset 0 0 0.3em rgba(255, 255, 255, 0.1),
+    inset 0 0.3em 0.6em rgba(0, 0, 0, 0.4),
+    0 0.1em 0.2em rgba(255, 255, 255, 0.1);
     transition: ease-in-out 500ms;
 }
 

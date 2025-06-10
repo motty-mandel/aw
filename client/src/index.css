@@ -1,0 +1,15 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+    padding-top: 150px;
+}
+
+.app-content {
+    min-height: 100vh;
+    overflow-y: auto;
+    padding-top: 100px;
+}
+
+.paintings-container {
+    padding: 20px;
+}

@@ -34,7 +34,7 @@ export default function Header() {
 
     return (
         <div className={`App-${theme}`}>
-            <div className="d-flex align-items-center justify-content-between">
+
 
                 <header className="d-flex flex-row align-items-center justify-content-between p-3 header">
                     
@@ -43,11 +43,11 @@ export default function Header() {
                     </div>
 
                     <nav className="d-flex flex-column align-items-center center-nav">
-                        <Link to={'/'}><span className="mb-0 pb-0 header-span">Avigails Art</span></Link>
+                        <Link to={'/'}><span className="mb-0 header-span">Avigails Art</span></Link>
                         <img src={lightBorderPic} alt="flower-border" height={"70px"} />
                     </nav>
 
-                    <div className="d-flex align-items-center right-nav">
+                    <div className="d-flex justify-content-end right-nav">
                         <div className="links">
                             <Link to={'/'}><p>Home</p></Link>
                             <Link to={'/sets'}><p>Painting sets</p></Link>
@@ -59,7 +59,7 @@ export default function Header() {
 
                 </header>
 
-            </div>
+
         </div>
     );
 }

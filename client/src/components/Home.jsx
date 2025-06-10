@@ -63,50 +63,51 @@ export default function Home() {
         }
     };
 
-    if (loading) {
-        return (
-            <div>
-                Loading...
-            </div>
-        )
-    }
-
     return (
-        <>
-
-            <div className="container">
-                <div className="row">
-
-                    {paintingsList.map((painting) => (
-                        <div key={painting.id} className="col-6 col-md-6 col-lg-4 d-flex justify-content-center">
-                            <div className="display" ref={(el) => (paintingRefs.current[painting.id] = el)}>
-                                <div className="canvas" onClick={() => handlePaintingClick(painting)}>
-                                    <img
-                                        className={`painting ${painting.orientation}`}
-                                        src={`https://aw-backend.onrender.com/${painting.image}`}
-                                        alt={painting.name}
-                                    />
-                                </div>
-                            </div>
-                        </div>
-                    ))}
-                    <br />
-                    {longPaintings.map((painting) => (
-                        <div key={painting.id} className="col-6 col-md-6 col-lg-4 d-flex justify-content-center">
-                            <div className="display" ref={(el) => (paintingRefs.current[painting.id] = el)}>
-                                <div className="canvas" onClick={() => handlePaintingClick(painting)}>
-                                    <img
-                                        className={`painting ${painting.orientation}`}
-                                        src={`https://aw-backend.onrender.com/${painting.image}`}
-                                        alt={painting.name}
-                                    />
-                                </div>
-                            </div>
-                        </div>
-                    ))}
-
+        <div className="paintings-container">
+            {loading && delay ? (
+                <div className="loading-container">
+                    <h1>Loading...</h1>
                 </div>
-            </div>
-        </>
+            ) : (
+                <>
+                    <div className="paintings-grid">
+                        <div className="container">
+                            <div className="row">
+
+                                {paintingsList.map((painting) => (
+                                    <div key={painting.id} className="col-6 col-md-6 col-lg-4 d-flex justify-content-center">
+                                        <div className="display" ref={(el) => (paintingRefs.current[painting.id] = el)}>
+                                            <div className="canvas" onClick={() => handlePaintingClick(painting)}>
+                                                <img
+                                                    className={`painting ${painting.orientation}`}
+                                                    src={`https://aw-backend.onrender.com/${painting.image}`}
+                                                    alt={painting.name}
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}
+                                <br />
+                                {longPaintings.map((painting) => (
+                                    <div key={painting.id} className="col-6 col-md-6 col-lg-4 d-flex justify-content-center">
+                                        <div className="display" ref={(el) => (paintingRefs.current[painting.id] = el)}>
+                                            <div className="canvas" onClick={() => handlePaintingClick(painting)}>
+                                                <img
+                                                    className={`painting ${painting.orientation}`}
+                                                    src={`https://aw-backend.onrender.com/${painting.image}`}
+                                                    alt={painting.name}
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}
+
+                            </div>
+                        </div>
+                    </div>
+                </>
+            )}
+        </div>
     );
 };
