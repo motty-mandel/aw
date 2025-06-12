@@ -1,3 +1,7 @@
+.row {
+    margin-top: 100px;
+}
+
 .canvas {
     height: 300px;
     margin: 30px 0;

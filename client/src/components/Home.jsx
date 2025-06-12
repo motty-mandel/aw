@@ -76,7 +76,7 @@ export default function Home() {
                             <div className="row">
 
                                 {paintingsList.map((painting) => (
-                                    <div key={painting.id} className="col-6 col-md-6 col-lg-4 d-flex justify-content-center">
+                                    <div key={painting.id} className="col-6 col-md-6 col-lg-3 d-flex justify-content-center">
                                         <div className="display" ref={(el) => (paintingRefs.current[painting.id] = el)}>
                                             <div className="canvas" onClick={() => handlePaintingClick(painting)}>
                                                 <img
@@ -88,7 +88,9 @@ export default function Home() {
                                         </div>
                                     </div>
                                 ))}
+
                                 <br />
+
                                 {longPaintings.map((painting) => (
                                     <div key={painting.id} className="col-6 col-md-6 col-lg-4 d-flex justify-content-center">
                                         <div className="display" ref={(el) => (paintingRefs.current[painting.id] = el)}>
