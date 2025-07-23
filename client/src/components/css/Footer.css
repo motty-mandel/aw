@@ -20,3 +20,7 @@ footer {
 .bio .container .bio-text {
     font-weight: bolder;
 }
+
+.footer-span {
+    margin-right: 10px;
+}
