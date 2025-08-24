@@ -11,24 +11,29 @@ export default function Footer() {
         <footer className="text-center text-lg-start">
 
             {/* <!-- Section: Social media --> */}
-            <section className="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-                {/* <!-- Left --> */}
-                <div className="me-5 d-none d-lg-block">
+            <section className="d-flex justify-content-center justify-content-lg-between p-4 border-bottom social-media">
+
+                <div className="mb-3">
                     <span className="footer-span">Get connected with me on Instagram:</span>
                     <a href="https://www.instagram.com/artby_avigail/" target="_blank" className="me-4 text-reset instaLink">
                         <i className="fab fa-instagram"></i>
                     </a>
                 </div>
-                {/* <!-- Left --> */}
 
-                {/* <!-- Right --> */}
-                <div>
+                <div className="mb-3">
                     <span className="footer-span">Get connected with me on Youtube:</span>
                     <a href="https://www.youtube.com/@AvigailMandel" target="_blank" className="me-4 text-reset youtubeLink">
                         <i className="fab fa-youtube"></i>
                     </a>
                 </div>
-                {/* <!-- Right --> */}
+
+                <div>
+                    <span className="footer-span">Check out my music on Spotify:</span>
+                    <a href="https://open.spotify.com/artist/4TJuzvNqkGJhQ45XtqMXop" target="_blank" className="me-4 text-reset spotifyLink">
+                        <i className="fab fa-spotify"></i>
+                    </a>
+                </div>
+
             </section>
             {/* <!-- Section: Social media --> */}
 
