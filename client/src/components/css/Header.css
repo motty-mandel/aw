@@ -30,6 +30,37 @@
     right: 0;
     z-index: 1000;
     transform: scale(0.98);
+    transition: all 0.3s ease-in-out;
+}
+
+.header.shrink {
+    padding: 0.5rem !important;
+    margin-top: 5px;
+}
+
+.header.shrink .profile img {
+    height: 140px !important;
+}
+
+.header.shrink .header-span {
+    font-size: 50px;
+}
+
+.header.shrink .center-nav img {
+    height: 40px !important;
+}
+
+.header.shrink .right-nav .links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    transition: all 0.3s ease-in-out;
+}
+
+.header.shrink .right-nav .links p {
+    padding: 8px;
+    margin: 3px;
+    font-size: x-small;
+    transition: all 0.3s ease-in-out;
 }
 
 /*--------------- Profile */
@@ -41,7 +72,7 @@
     inset 0 0 0.3em rgba(255, 255, 255, 0.4),
     inset 0 0.4em 0.6em rgba(0, 0, 0, 0.05),
     0 0.1em 0.2em rgba(0, 0, 0, 0.03);
-    transition: ease-in-out 500ms;
+    transition: all 0.3s ease-in-out;
 }
 
 .profile {
@@ -57,7 +88,7 @@
     font-style: normal;
     cursor: default;
     color: black;
-    transition: ease-in-out 500ms;
+    transition: all 0.3s ease-in-out;
 }
 
 .center-nav a {
@@ -69,6 +100,10 @@
 .center-nav {
     flex: 1;
     max-width: 40%;
+}
+
+.center-nav img {
+    transition: all 0.3s ease-in-out;
 }
 
 /*-------------------- Menu buttons */
@@ -94,7 +129,7 @@
     inset 0 0 0.3em rgba(255, 255, 255, 0.4),
     inset 0 0.4em 0.6em rgba(0, 0, 0, 0.1),
     0 0.1em 0.2em rgba(0, 0, 0, 0.1);
-    transition: ease-in-out 500ms;
+    transition: all 0.3s ease-in-out;
 }
 
 .right-nav {

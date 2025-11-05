@@ -25,7 +25,7 @@ export default function Connect() {
             return;
         }
 
-        emailjs.sendForm('service_bgkimz8', 'template_j0k8d1e', form.current)
+        emailjs.sendForm('service_bgkimz8', 'template_svuoluo', form.current)
             .then(() => {
                 console.log('Success');
                 alert('Message sent successfully');

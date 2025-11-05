@@ -78,6 +78,12 @@
     transition: ease-in-out 200ms;
 }
 
+.Dark .loading-container {
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
 /* -------------------------------------------- */
 /* Sets dark mode */
 
@@ -106,10 +112,11 @@
 .Dark footer {
     color: var(--darkMode-font);
     background-color: var(--darkMode-background);
-    box-shadow: -0.3em -0.3em 0.5em #373d42,
-    0.3em 0.3em 0.5em #1c1e22;
+   box-shadow: 
+   inset 0 0 0.3em rgba(255, 255, 255, 0.1),
+   0 0.3em 0.6em rgba(0, 0, 0, 0.4),
+   0 0.1em 0.2em rgba(255, 255, 255, 0.1);
     transition: ease-in-out 500ms;
-
 }
 
 /* -------------------------------------------- */
