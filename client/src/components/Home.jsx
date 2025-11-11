@@ -24,8 +24,8 @@ export default function Home() {
             try {
                 setLoading(true);
                 const [paintingsListRes, longPaintingsRes] = await Promise.all([
-                    axios.get("http://localhost:5000/api/paintings"),
-                    axios.get("http://localhost:5000/api/longPaintings")
+                    axios.get("https://aw-backend.onrender.com/api/paintings"),
+                    axios.get("https://aw-backend.onrender.com/api/longPaintings")
                 ])
                 setPaintingsList(paintingsListRes.data);
                 setLongPaintings(longPaintingsRes.data);
@@ -81,7 +81,7 @@ export default function Home() {
                                             <div className="canvas" onClick={() => handlePaintingClick(painting)}>
                                                 <img
                                                     className={`painting ${painting.orientation}`}
-                                                    src={`http://localhost:5000/${painting.image}`}
+                                                    src={`https://aw-backend.onrender.com/${painting.image}`}
                                                     alt={painting.name}
                                                 />
                                             </div>
