@@ -18,7 +18,6 @@ export default function Header() {
 
 const handleResize = () => {
     setIsMobile(window.innerWidth <= 720);
-    console.log('Window width:', window.innerWidth, 'isMobile:', window.innerWidth <= 720);
 }
 
     useEffect(() => {
