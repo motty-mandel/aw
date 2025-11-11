@@ -19,10 +19,10 @@ app.use(bodyParser.raw({ type: 'application.json' }));
 const paintings = [
     {
         id: 1,
-        image: "/images/hibiscus.jpg",
-        name: 'Hibiscus',
-        price: "175",
-        stripeId: 'price_1Q9Y3p08itiWYv2ZOVkm99ZE',
+        image: "/images/Bayis-shlishi.jpg",
+        name: 'Bayis Shlishi',
+        price: "750",
+        stripeId: 'price_1SSPNh08itiWYv2Zkcoveymf',
         size: " 24x30",
         orientation: 'portrait',
     },
@@ -233,6 +233,15 @@ const paintings = [
         size: " 48x12",
         orientation: 'landscape',
     },
+    {
+        id: 25,
+        image: "/images/hibiscus.jpg",
+        name: 'Hibiscus',
+        price: "175",
+        stripeId: 'price_1Q9Y3p08itiWYv2ZOVkm99ZE',
+        size: " 24x30",
+        orientation: 'portrait',
+    }
 ];
 
 const longPaintings = [
@@ -243,7 +252,7 @@ const longPaintings = [
         price: "100",
         stripeId: 'price_1QN07g08itiWYv2ZBugw6GVh',
         size: " 48x12",
-        orientation: 'landscape',
+        orientation: 'long',
     },
     {
         id: 2,
@@ -252,7 +261,7 @@ const longPaintings = [
         price: "100",
         stripeId: 'price_1QN08g08itiWYv2ZoX0nzmse',
         size: " 48x12",
-        orientation: 'landscape',
+        orientation: 'long',
     },
     {
         id: 3,
@@ -261,7 +270,7 @@ const longPaintings = [
         price: "100",
         stripeId: 'price_1QN09F08itiWYv2ZHmRaF6DL',
         size: " 48x12",
-        orientation: 'landscape',
+        orientation: 'long',
     },
 ];
 
@@ -362,7 +371,7 @@ app.post('/create-checkout-session', async (req, res) => {
     const { stripeId } = req.body;
     try {
         const session = await stripe.checkout.sessions.create({
-            success_url: 'http://localhost:3000/success',
+            success_url: 'https://avigailsart.com',
             cancel_url: 'https://avigailsart.com',
             line_items: [
                 {

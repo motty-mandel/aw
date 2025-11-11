@@ -7,4 +7,9 @@
         width: 200px;
         height: auto;
     }
+
+    .long {
+        height: auto;
+        width: 200px;
+    }
 }

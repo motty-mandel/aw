@@ -1,4 +1,6 @@
 .loading-container {
+        display: flex;
+    justify-content: center;
     margin-top: 300px;
 }
 
@@ -54,8 +56,12 @@
 }
 
 .landscape {
+    width: auto;
+}
+
+.long {
+    width: 500px;
     height: auto;
-    width: 100%;
 }
 
 .painting:hover {

@@ -24,8 +24,8 @@ export default function Home() {
             try {
                 setLoading(true);
                 const [paintingsListRes, longPaintingsRes] = await Promise.all([
-                    axios.get("https://aw-backend.onrender.com/api/paintings"),
-                    axios.get("https://aw-backend.onrender.com/api/longPaintings")
+                    axios.get("http://localhost:5000/api/paintings"),
+                    axios.get("http://localhost:5000/api/longPaintings")
                 ])
                 setPaintingsList(paintingsListRes.data);
                 setLongPaintings(longPaintingsRes.data);
@@ -76,12 +76,12 @@ export default function Home() {
                             <div className="row">
 
                                 {paintingsList.map((painting) => (
-                                    <div key={painting.id} className="col-6 col-md-6 col-lg-3 d-flex justify-content-center">
+                                    <div key={painting.id} className="col-6 col-md-6 col-lg-6 d-flex justify-content-center">
                                         <div className="display" ref={(el) => (paintingRefs.current[painting.id] = el)}>
                                             <div className="canvas" onClick={() => handlePaintingClick(painting)}>
                                                 <img
                                                     className={`painting ${painting.orientation}`}
-                                                    src={`https://aw-backend.onrender.com/${painting.image}`}
+                                                    src={`http://localhost:5000/${painting.image}`}
                                                     alt={painting.name}
                                                 />
                                             </div>
@@ -92,7 +92,7 @@ export default function Home() {
                                 <br />
 
                                 {longPaintings.map((painting) => (
-                                    <div key={painting.id} className="col-6 col-md-6 col-lg-4 d-flex justify-content-center">
+                                    <div key={painting.id} className="col-6 col-md-6 col-lg-6 d-flex justify-content-center">
                                         <div className="display" ref={(el) => (paintingRefs.current[painting.id] = el)}>
                                             <div className="canvas" onClick={() => handlePaintingClick(painting)}>
                                                 <img

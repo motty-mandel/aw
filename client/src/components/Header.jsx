@@ -16,13 +16,10 @@ export default function Header() {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobile, setIsMobile] = useState(false)
 
-    const handleResize = () => {
-        if (window.innerWidth > 720) {
-            setIsMobile(true)
-        } else {
-            setIsMobile(false)
-        }
-    }
+const handleResize = () => {
+    setIsMobile(window.innerWidth <= 720);
+    console.log('Window width:', window.innerWidth, 'isMobile:', window.innerWidth <= 720);
+}
 
     useEffect(() => {
         window.addEventListener("resize", handleResize)
@@ -50,7 +47,7 @@ export default function Header() {
 
     useEffect(() => {
         const handleScroll = () => {
-            if (window.scrollY > 80) {
+            if (window.scrollY > 40) {
                 setIsScrolled(true);
             } else {
                 setIsScrolled(false);
@@ -65,7 +62,7 @@ export default function Header() {
         <div className={`App-${theme}`}>
 
 
-            <header className={`d-flex flex-row align-items-center justify-content-between p-3 header ${isScrolled && isMobile ? 'shrink' : ''}`}>
+            <header className={`d-flex flex-row align-items-center justify-content-between p-3 header ${isScrolled && !isMobile ? 'shrink' : ''}`}>
 
                 <div className="profile left-nav">
                     <img src={avigailProfile} alt="profile-pic" height={'150px'} />
